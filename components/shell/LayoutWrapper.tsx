@@ -1,4 +1,9 @@
-import { createElement, type ElementType, type HTMLAttributes, type ReactNode } from "react"
+import {
+  createElement,
+  type ElementType,
+  type HTMLAttributes,
+  type ReactNode,
+} from "react"
 
 import { cn } from "@/lib/utils"
 
@@ -44,7 +49,7 @@ export function LayoutWrapper({
     as,
     {
       className: cn(
-        "mx-auto w-full min-w-0",
+        "mx-auto h-full w-full min-w-0",
         maxWidthMap[maxWidth],
         paddingMap[padding],
         className
