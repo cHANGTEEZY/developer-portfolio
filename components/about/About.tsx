@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div className="flex flex-col gap-10">
       <header className="max-w-2xl space-y-4">
-        <h1 className="font-heading text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+        <h1 className="font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           React Native <br /> Engineering Studio
         </h1>
 
@@ -22,7 +22,7 @@ const About = () => {
 
       <Button
         onClick={() => console.log("clicked")}
-        variant="secondary"
+        variant="primary"
         size="medium"
         disabled={false}
         loading={false}

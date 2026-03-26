@@ -1,4 +1,4 @@
-import { Geist, JetBrains_Mono } from "next/font/google"
+import { Geist, JetBrains_Mono, DM_Sans } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -14,6 +14,11 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
 })
 
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,11 +31,11 @@ export default function RootLayout({
       className={cn(
         "antialiased",
         fontSans.variable,
-        "font-mono",
+        dmSans.variable,
         jetbrainsMono.variable
       )}
     >
-      <body>
+      <body className={fontSans.className}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

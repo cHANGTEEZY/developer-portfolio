@@ -1,7 +1,7 @@
 import { cva, type VariantProps } from "class-variance-authority"
 
 export const compositionButtonVariants = cva(
-  "inline-flex w-fit shrink-0 items-center justify-center font-semibold tracking-tight transition-[color,box-shadow,transform,background-color,border-color] outline-none select-none focus-visible:ring-2 focus-visible:ring-ring/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-45 active:scale-[0.99]",
+  "inline-flex w-fit shrink-0 items-center justify-center font-dm font-semibold tracking-tight transition-[color,box-shadow,transform,background-color,border-color] outline-none select-none focus-visible:ring-2 focus-visible:ring-ring/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-[0.99] disabled:pointer-events-none disabled:opacity-45",
   {
     variants: {
       variant: {
@@ -13,12 +13,15 @@ export const compositionButtonVariants = cva(
           "border border-transparent bg-transparent text-foreground hover:bg-muted/90 hover:text-foreground",
         destructive:
           "border border-destructive/15 bg-destructive text-white shadow-sm hover:bg-destructive/92",
-        link: "h-auto min-h-0 border-0 bg-transparent px-0 py-0 font-semibold text-primary shadow-none hover:bg-transparent hover:underline hover:underline-offset-4 active:scale-100",
+        link: "h-auto min-h-0 border-0 bg-transparent px-0 py-0 font-semibold text-primary underline shadow-none hover:cursor-pointer hover:bg-transparent hover:underline active:scale-100",
       },
       size: {
-        small: "gap-1.5 rounded-md px-3 text-xs [&_[data-slot=button-text]]:text-xs",
-        medium: "gap-2 rounded-lg px-4 text-sm [&_[data-slot=button-text]]:text-sm",
-        large: "gap-2.5 rounded-xl px-5 text-base [&_[data-slot=button-text]]:text-base",
+        small:
+          "gap-1.5 rounded-md px-3 text-xs [&_[data-slot=button-text]]:text-xs",
+        medium:
+          "gap-2 rounded-lg px-4 text-sm [&_[data-slot=button-text]]:text-sm",
+        large:
+          "gap-2.5 rounded-xl px-5 text-base [&_[data-slot=button-text]]:text-base",
       },
     },
     compoundVariants: [
