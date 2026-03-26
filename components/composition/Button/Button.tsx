@@ -20,6 +20,8 @@ import {
   compositionButtonVariants,
   type CompositionButtonVariantProps,
 } from "./button-styles"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { Loading02Icon } from "@hugeicons/core-free-icons"
 
 const ICON_SIZE_PX: Record<ButtonContextType["size"], number> = {
   small: 14,
@@ -38,11 +40,11 @@ const Button = ({
   "aria-label": ariaLabel,
 }: {
   children: React.ReactNode
-  onClick: () => void
+  onClick?: () => void
   variant: NonNullable<CompositionButtonVariantProps["variant"]>
   size: NonNullable<CompositionButtonVariantProps["size"]>
-  disabled: boolean
-  loading: boolean
+  disabled?: boolean
+  loading?: boolean
   className?: string
   "aria-label"?: string
 }) => {
@@ -129,10 +131,10 @@ export const ButtonIcon = ({ children, className }: ButtonIconProps) => {
         )}
         aria-hidden
       >
-        <Loader2
+        <HugeiconsIcon
+          icon={Loading02Icon}
+          size={16}
           className="animate-spin"
-          size={px}
-          strokeWidth={2.25}
         />
       </span>
     )

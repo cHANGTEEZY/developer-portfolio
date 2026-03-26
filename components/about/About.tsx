@@ -10,13 +10,13 @@ const About = () => {
     <div className="flex flex-col gap-10">
       <header className="max-w-2xl space-y-4">
         <h1 className="font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-          React Native <br /> Engineering Studio
+          React & React Native <br /> Engineering Studio
         </h1>
 
         <p className="text-lg leading-relaxed text-muted-foreground">
-          App&Flow is a Montreal-based React Native engineering studio. We
+          VBEE Studio is a Montreal-based React Native engineering studio. We
           partner with the world&apos;s top companies to help them unlock the
-          full potential of React Native and Expo.
+          full potential of React, React Native and Expo.
         </p>
       </header>
 
@@ -24,8 +24,7 @@ const About = () => {
         onClick={() => console.log("clicked")}
         variant="primary"
         size="medium"
-        disabled={false}
-        loading={false}
+        loading={true}
       >
         <Button.Text>Book a Discovery Call</Button.Text>
         <Button.Icon>
