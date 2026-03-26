@@ -13,7 +13,7 @@ const About = () => {
           React & React Native <br /> Engineering Studio
         </h1>
 
-        <p className="text-lg leading-relaxed text-muted-foreground">
+        <p className="font-mono text-lg leading-relaxed text-muted-foreground">
           VBEE Studio is a Montreal-based React Native engineering studio. We
           partner with the world&apos;s top companies to help them unlock the
           full potential of React, React Native and Expo.
@@ -24,7 +24,7 @@ const About = () => {
         onClick={() => console.log("clicked")}
         variant="primary"
         size="medium"
-        loading={true}
+        loading={false}
       >
         <Button.Text>Book a Discovery Call</Button.Text>
         <Button.Icon>
