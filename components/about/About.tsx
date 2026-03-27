@@ -4,6 +4,10 @@ import { HugeiconsIcon } from "@hugeicons/react"
 import { ArrowRight02Icon } from "@hugeicons/core-free-icons"
 
 import Button from "../composition/Button"
+import Tooltip, {
+  TooltipContent,
+  TooltipTrigger,
+} from "../composition/Tooltip/Tooltip"
 
 const About = () => {
   return (
@@ -33,6 +37,20 @@ const About = () => {
           <HugeiconsIcon icon={ArrowRight02Icon} />
         </Button.Icon>
       </Button>
+
+      <Tooltip>
+        <TooltipTrigger mode="click" decay="immediate">
+          <button
+            onClick={() => navigator.clipboard.writeText("sales@vbee.studio")}
+            className="cursor-pointer"
+          >
+            sales@vbee.studio
+          </button>
+        </TooltipTrigger>
+        <TooltipContent variant="default" size="sm" position="bottom">
+          &quot;copied&quot;
+        </TooltipContent>
+      </Tooltip>
     </div>
   )
 }
