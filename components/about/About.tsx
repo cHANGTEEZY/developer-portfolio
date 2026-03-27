@@ -7,13 +7,13 @@ import Button from "../composition/Button"
 
 const About = () => {
   return (
-    <div className="flex flex-col gap-10">
-      <header className="max-w-2xl space-y-4">
-        <h1 className="font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+    <div className="flex flex-col items-center justify-center">
+      <header className="max-w-2xl space-y-8">
+        <h1 className="text-center font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           React & React Native <br /> Engineering Studio
         </h1>
 
-        <p className="font-mono text-lg leading-relaxed text-muted-foreground">
+        <p className="text-center font-mono text-lg leading-relaxed text-muted-foreground">
           VBEE Studio is a Montreal-based React Native engineering studio. We
           partner with the world&apos;s top companies to help them unlock the
           full potential of React, React Native and Expo.
@@ -25,6 +25,8 @@ const About = () => {
         variant="primary"
         size="medium"
         loading={false}
+        behavior="ctaLift"
+        className="mt-8 cursor-pointer"
       >
         <Button.Text>Book a Discovery Call</Button.Text>
         <Button.Icon>

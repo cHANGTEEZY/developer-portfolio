@@ -8,11 +8,10 @@ import {
   type ReactNode,
 } from "react"
 
-import { Loader2 } from "lucide-react"
-
 import { cn } from "@/lib/utils"
 
 import ButtonContext, {
+  type ButtonBehavior,
   ButtonContextType,
   useButtonContext,
 } from "./button-context"
@@ -29,6 +28,14 @@ const ICON_SIZE_PX: Record<ButtonContextType["size"], number> = {
   large: 22,
 }
 
+function behaviorButtonClasses(behavior: ButtonBehavior) {
+  return cn(
+    (behavior === "cta" || behavior === "ctaLift") && "group/button",
+    (behavior === "lift" || behavior === "ctaLift") &&
+      "motion-safe:transition-transform motion-safe:duration-200 motion-safe:ease-out motion-safe:hover:-translate-y-px"
+  )
+}
+
 const Button = ({
   children,
   onClick,
@@ -37,6 +44,7 @@ const Button = ({
   disabled,
   loading,
   className,
+  behavior,
   "aria-label": ariaLabel,
 }: {
   children: React.ReactNode
@@ -46,14 +54,19 @@ const Button = ({
   disabled?: boolean
   loading?: boolean
   className?: string
+  /** Extra motion/feedback. `cta` nudges the icon right on hover (works best with a trailing `Button.Icon`). */
+  behavior?: ButtonBehavior
   "aria-label"?: string
 }) => {
+  const resolvedBehavior: ButtonBehavior = behavior ?? "default"
+
   const contextValue: ButtonContextType = {
     onClick,
     variant,
     size,
     disabled,
     loading,
+    behavior: resolvedBehavior,
   }
 
   return (
@@ -65,7 +78,11 @@ const Button = ({
         aria-label={ariaLabel}
         disabled={disabled || loading}
         onClick={onClick}
-        className={cn(compositionButtonVariants({ variant, size }), className)}
+        className={cn(
+          compositionButtonVariants({ variant, size }),
+          behaviorButtonClasses(resolvedBehavior),
+          className
+        )}
       >
         {children}
       </button>
@@ -74,6 +91,8 @@ const Button = ({
 }
 
 export default Button
+
+export type { ButtonBehavior }
 
 export type ButtonTextProps = {
   children?: ReactNode
@@ -119,8 +138,13 @@ function renderSizedIcon(children: ReactNode, px: number): ReactNode {
 }
 
 export const ButtonIcon = ({ children, className }: ButtonIconProps) => {
-  const { loading, size: buttonSize } = useButtonContext()
+  const { loading, size: buttonSize, behavior } = useButtonContext()
   const px = ICON_SIZE_PX[buttonSize]
+
+  const ctaIconMotion =
+    !loading &&
+    (behavior === "cta" || behavior === "ctaLift") &&
+    "motion-safe:transition-transform motion-safe:duration-200 motion-safe:ease-out motion-safe:group-hover/button:translate-x-1"
 
   if (loading) {
     return (
@@ -148,6 +172,7 @@ export const ButtonIcon = ({ children, className }: ButtonIconProps) => {
     <span
       className={cn(
         "inline-flex shrink-0 items-center justify-center text-current [&_svg]:pointer-events-none",
+        ctaIconMotion,
         className
       )}
       aria-hidden

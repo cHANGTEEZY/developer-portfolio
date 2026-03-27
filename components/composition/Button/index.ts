@@ -1,6 +1,10 @@
 import Button, { ButtonText, ButtonIcon } from "./Button"
 
-export type { ButtonIconProps, ButtonTextProps } from "./Button"
+export type {
+  ButtonBehavior,
+  ButtonIconProps,
+  ButtonTextProps,
+} from "./Button"
 
 export {
   compositionButtonVariants,
