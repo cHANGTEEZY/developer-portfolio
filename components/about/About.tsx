@@ -21,7 +21,7 @@ const About = () => {
         </h1>
 
         <p className="max-w-[500px] text-center font-mono text-sm leading-relaxed text-muted-foreground">
-          VBEE Studio is a Montreal-based React Native engineering studio. We
+          VBEE Studio is a Kathmandu-based React Native engineering studio. We
           partner with the world&apos;s top companies to help them unlock the
           full potential of React, React Native and Expo.
         </p>
