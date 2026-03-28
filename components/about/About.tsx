@@ -46,7 +46,7 @@ const About = () => {
           <TooltipTrigger mode="click" decay="immediate">
             <button
               onClick={() => navigator.clipboard.writeText("sales@vbee.studio")}
-              className="cursor-pointer"
+              className="cursor-pointer text-sm italic"
             >
               sales@vbee.studio
             </button>
