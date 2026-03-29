@@ -47,6 +47,8 @@
     --radius-2xl: calc(var(--radius) * 1.8);
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
+    /* Infinite marquee */
+    --animate-marquee: marquee 45s linear infinite;
 }
 
 :root {
@@ -126,3 +128,12 @@
     @apply bg-background text-foreground;
     }
   }
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

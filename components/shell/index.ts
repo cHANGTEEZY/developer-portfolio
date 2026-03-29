@@ -6,5 +6,6 @@ export type {
 } from "./LayoutWrapper"
 export { LazyChunk } from "./LazyChunk"
 export type { LazyChunkLoader, LazyChunkProps } from "./LazyChunk"
+export { LazyLoader } from "./LazyLoader"
 export { LazyMount } from "./LazyMount"
 export type { LazyMountProps } from "./LazyMount"

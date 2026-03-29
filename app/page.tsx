@@ -1,8 +1,8 @@
-// import Antigravity from "@/components/Antigravity"
 import About from "@/components/about/About"
-import Hero from "@/components/hero/Hero"
 import Navbar from "@/components/navbar/Navbar"
 import { LayoutWrapper } from "@/components/shell"
+import Hero from "@/components/hero/Hero"
+import Expertise from "@/components/expertise/Expertise"
 
 export default function HomePage() {
   return (
@@ -11,6 +11,9 @@ export default function HomePage() {
       <Hero />
       <div className="mt-12">
         <About />
+      </div>
+      <div className="mt-32">
+        <Expertise />
       </div>
     </LayoutWrapper>
   )
