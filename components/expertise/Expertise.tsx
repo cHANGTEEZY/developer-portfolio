@@ -4,7 +4,7 @@ import { EXPERTISE } from "./data"
 
 const Expertise = () => {
   return (
-    <section className="">
+    <section className="mb-10 border-b border-muted pb-10">
       <div className="flex flex-col items-center justify-center gap-2">
         <span className="font-mono text-xs text-muted-foreground">
           EXPERTISE
@@ -26,11 +26,11 @@ const Expertise = () => {
           FULL-STACK && CUSTOM
         </span>
 
-        <div className="flex max-w-[500px] flex-wrap items-center justify-center gap-2">
+        <div className="flex max-w-[500px] flex-wrap items-center justify-center gap-2 px-3 sm:px-0">
           {EXPERTISE.map((expertise, index) => (
             <button
               key={index}
-              className="rounded-lg border border-gray-800 px-2 py-1 font-sans text-sm transition-all duration-300 hover:scale-105"
+              className="rounded-full border border-gray-800 px-2 py-1 font-sans text-xs text-muted-foreground/80 transition-all duration-300 hover:scale-110"
             >
               {expertise}
             </button>

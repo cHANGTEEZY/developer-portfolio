@@ -6,15 +6,20 @@ import Expertise from "@/components/expertise/Expertise"
 
 export default function HomePage() {
   return (
-    <LayoutWrapper maxWidth="sm" padding="none">
-      <Navbar />
-      <Hero />
-      <div className="mt-12">
-        <About />
-      </div>
-      <div className="mt-32">
-        <Expertise />
-      </div>
-    </LayoutWrapper>
+    <>
+      <LayoutWrapper maxWidth="sm" padding="none">
+        <Navbar />
+        <Hero />
+        <div className="mt-12">
+          <About />
+        </div>
+        <div className="mt-32">
+          <Expertise />
+        </div>
+      </LayoutWrapper>
+      <LayoutWrapper maxWidth="full" padding="tight">
+        <div className="rounded-3xl bg-muted/30"></div>
+      </LayoutWrapper>
+    </>
   )
 }
