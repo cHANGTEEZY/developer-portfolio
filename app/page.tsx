@@ -1,15 +1,25 @@
-// import Antigravity from "@/components/Antigravity"
 import About from "@/components/about/About"
 import Navbar from "@/components/navbar/Navbar"
 import { LayoutWrapper } from "@/components/shell"
+import Hero from "@/components/hero/Hero"
+import Expertise from "@/components/expertise/Expertise"
 
 export default function HomePage() {
   return (
-    <LayoutWrapper maxWidth="sm" padding="none">
-      <Navbar />
-      <div className="mt-24">
-        <About />
-      </div>
-    </LayoutWrapper>
+    <>
+      <LayoutWrapper maxWidth="sm" padding="none">
+        <Navbar />
+        <Hero />
+        <div className="mt-12">
+          <About />
+        </div>
+        <div className="mt-32">
+          <Expertise />
+        </div>
+      </LayoutWrapper>
+      <LayoutWrapper maxWidth="full" padding="tight">
+        <div className="rounded-3xl bg-muted/30"></div>
+      </LayoutWrapper>
+    </>
   )
 }

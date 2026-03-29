@@ -20,10 +20,10 @@ const About = () => {
           React & React Native <br /> Engineering Studio
         </h1>
 
-        <p className="max-w-[500px] text-center font-mono text-sm leading-relaxed text-muted-foreground">
-          VBEE Studio is a Kathmandu-based React Native engineering studio. We
-          partner with the world&apos;s top companies to help them unlock the
-          full potential of React, React Native and Expo.
+        <p className="max-w-[500px] px-6 text-center font-mono text-sm leading-relaxed text-muted-foreground sm:px-0">
+          VBEE Studio is a Kathmandu-based React & React Native engineering
+          studio. We partner with the world&apos;s top companies to help them
+          unlock the full potential of React, React Native and Expo.
         </p>
       </header>
 
@@ -46,7 +46,7 @@ const About = () => {
           <TooltipTrigger mode="click" decay="immediate">
             <button
               onClick={() => navigator.clipboard.writeText("sales@vbee.studio")}
-              className="cursor-pointer"
+              className="cursor-pointer text-sm italic"
             >
               sales@vbee.studio
             </button>

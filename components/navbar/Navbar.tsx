@@ -9,7 +9,7 @@ const logoClass = "size-[60px] object-contain"
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between py-2">
+    <nav className="flex items-center justify-between px-6 py-2 sm:px-0">
       <span className="relative inline-block size-[60px] shrink-0">
         <Image
           src="/VBEE_dark.png"

@@ -17,11 +17,11 @@ export const compositionButtonVariants = cva(
       },
       size: {
         small:
-          "gap-1.5 rounded-md px-3 text-xs [&_[data-slot=button-text]]:text-xs",
+          "gap-1.5 rounded-none px-3 text-xs [&_[data-slot=button-text]]:text-xs",
         medium:
-          "gap-2 rounded-lg px-4 text-sm [&_[data-slot=button-text]]:text-sm",
+          "gap-2 rounded-none px-4 text-sm [&_[data-slot=button-text]]:text-sm",
         large:
-          "gap-2.5 rounded-xl px-5 text-base [&_[data-slot=button-text]]:text-base",
+          "gap-2.5 rounded-none px-5 text-base [&_[data-slot=button-text]]:text-base",
       },
     },
     compoundVariants: [
