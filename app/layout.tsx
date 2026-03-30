@@ -1,4 +1,4 @@
-import { Geist, JetBrains_Mono, DM_Sans } from "next/font/google"
+import { Geist, JetBrains_Mono, DM_Sans, Comic_Neue, Kosugi_Maru } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -19,6 +19,18 @@ const dmSans = DM_Sans({
   variable: "--font-dm-sans",
 })
 
+const comicNeue = Comic_Neue({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-comic",
+})
+
+const kosugiMaru = Kosugi_Maru({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-maru",
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,10 +44,12 @@ export default function RootLayout({
         "antialiased",
         fontSans.variable,
         dmSans.variable,
-        jetbrainsMono.variable
+        jetbrainsMono.variable,
+        comicNeue.variable,
+        kosugiMaru.variable
       )}
     >
-      <body className={fontSans.className}>
+      <body className={cn(fontSans.className, "font-maru")}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

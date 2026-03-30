@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar/Navbar"
 import { LayoutWrapper } from "@/components/shell"
 import Hero from "@/components/hero/Hero"
 import Expertise from "@/components/expertise/Expertise"
+import Footer from "@/components/footer/Footer"
 
 export default function HomePage() {
   return (
@@ -19,6 +20,9 @@ export default function HomePage() {
       </LayoutWrapper>
       <LayoutWrapper maxWidth="full" padding="tight">
         <div className="rounded-3xl bg-muted/30"></div>
+      </LayoutWrapper>
+      <LayoutWrapper maxWidth="sm" padding="none">
+        <Footer />
       </LayoutWrapper>
     </>
   )
