@@ -4,6 +4,7 @@ import { LayoutWrapper } from "@/components/shell"
 import Hero from "@/components/hero/Hero"
 import Expertise from "@/components/expertise/Expertise"
 import Footer from "@/components/footer/Footer"
+import Work from "@/components/work/Work"
 
 export default function HomePage() {
   return (
@@ -19,7 +20,9 @@ export default function HomePage() {
         </div>
       </LayoutWrapper>
       <LayoutWrapper maxWidth="full" padding="tight">
-        <div className="rounded-3xl bg-muted/30"></div>
+        <div className="rounded-3xl bg-muted/30">
+          <Work />
+        </div>
       </LayoutWrapper>
       <LayoutWrapper maxWidth="sm" padding="none">
         <Footer />

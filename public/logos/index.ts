@@ -12,5 +12,11 @@ import app11 from "./app11.svg"
 import app12 from "./app12.svg"
 import app13 from "./app13.svg"
 import app14 from "./app14.svg"
+import oripari from "./Oripari.png"
+import cta from "./cta.webp"
 
-export const logos = [app1, app2, app3, app4, app5, app6, app7, app8, app9, app10, app11, app12, app13, app14]
+export const logos = [app1,
+     app2, app3, app4, app5, 
+     app6, app7, app8, app9, app10, app11,
+      app12, app13, app14,
+       oripari, cta]
