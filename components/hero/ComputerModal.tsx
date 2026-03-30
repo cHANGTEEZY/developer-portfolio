@@ -1,6 +1,8 @@
 import { Center, useGLTF } from "@react-three/drei"
 import * as THREE from "three"
 
+import { KILLER_BEATS_SCENE_GLTF } from "@/lib/modelUrls"
+
 type ComputerModalProps = {
   rotation?: [number, number, number]
   scale?: number
@@ -13,9 +15,7 @@ const ComputerModal = ({
   scale = 1.4,
   yOffset = 0,
 }: ComputerModalProps) => {
-  const { scene } = useGLTF(
-    "/models/killer_beats_casette_mixstation/scene.gltf"
-  )
+  const { scene } = useGLTF(KILLER_BEATS_SCENE_GLTF)
 
   return (
     <group position={[0, yOffset, 0]}>

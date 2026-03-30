@@ -15,6 +15,9 @@
 /.next/
 /out/
 
+# Generated from assets/models (see npm run prepare-assets)
+/public/models/
+
 # production
 /build
 

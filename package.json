@@ -4,6 +4,9 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "prepare-assets": "node scripts/copy-model-assets.mjs",
+    "predev": "npm run prepare-assets",
+    "prebuild": "npm run prepare-assets",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
