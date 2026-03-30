@@ -129,6 +129,14 @@
     }
   }
 
+.font-comic {
+  font-family: var(--font-comic), ui-rounded, system-ui, sans-serif;
+}
+
+.font-maru {
+  font-family: var(--font-maru), ui-rounded, system-ui, sans-serif;
+}
+
 @keyframes marquee {
   from {
     transform: translate3d(0, 0, 0);
@@ -136,4 +144,27 @@
   to {
     transform: translate3d(-50%, 0, 0);
   }
+}
+
+.input-group {
+  @apply flex flex-col gap-2;
+}
+
+.input-group .label {
+  @apply text-sm font-medium text-foreground;
+}
+
+.input-group .input {
+  @apply w-full p-2 border border-border;
+}
+
+.input-group .input::placeholder {
+  @apply text-xs font-medium text-muted-foreground font-mono;
+}
+
+.input-group .textarea {
+  @apply w-full p-2 border border-border;
+}
+.input-group .textarea::placeholder {
+  @apply text-xs font-medium text-muted-foreground font-mono;
 }

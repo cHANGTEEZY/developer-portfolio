@@ -1,7 +1,12 @@
-import React from "react"
+import Contact from "@/components/Contact/Contact"
+import { LayoutWrapper } from "@/components/shell"
 
-const page = () => {
-  return <div>page</div>
+const ContactPage = () => {
+  return (
+    <LayoutWrapper maxWidth="sm">
+      <Contact />
+    </LayoutWrapper>
+  )
 }
 
-export default page
+export default ContactPage
