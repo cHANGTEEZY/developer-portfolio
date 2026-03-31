@@ -233,9 +233,9 @@ function HeroOrbit() {
 
 const Hero = () => {
   return (
-    <div className="w-fullborder h-[min(80vh,900px)]">
+    <div className="relative h-[min(80vh,900px)] w-full">
       <Canvas
-        className="touch-none"
+        className="relative z-10 touch-none"
         camera={{ position: [45, 14, 28], fov: 50 }}
         dpr={[1, 1.75]}
         gl={{
