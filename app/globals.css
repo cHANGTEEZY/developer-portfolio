@@ -168,3 +168,7 @@
 .input-group .textarea::placeholder {
   @apply text-xs font-medium text-muted-foreground font-mono;
 }
+
+.hover-card {
+  @apply rounded-2xl hover:border-2 hover:shadow-lg transition-all duration-300;
+}

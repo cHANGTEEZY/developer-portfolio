@@ -5,6 +5,7 @@ import Hero from "@/components/hero/Hero"
 import Expertise from "@/components/expertise/Expertise"
 import Footer from "@/components/footer/Footer"
 import Work from "@/components/work/Work"
+import Services from "@/components/services/Services"
 
 export default function HomePage() {
   return (
@@ -14,6 +15,9 @@ export default function HomePage() {
         <Hero />
         <div className="mt-12">
           <About />
+        </div>
+        <div className="mt-32">
+          <Services />
         </div>
         <div className="mt-32">
           <Expertise />
