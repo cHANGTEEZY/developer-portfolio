@@ -3,7 +3,7 @@ import { LayoutWrapper } from "@/components/shell"
 
 const ContactPage = () => {
   return (
-    <LayoutWrapper maxWidth="sm">
+    <LayoutWrapper maxWidth="sm" padding="comfortable">
       <Contact />
     </LayoutWrapper>
   )

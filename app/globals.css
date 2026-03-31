@@ -151,22 +151,22 @@
 }
 
 .input-group .label {
-  @apply text-sm font-medium text-foreground;
+  @apply font-sans text-sm font-medium text-foreground;
 }
 
 .input-group .input {
-  @apply w-full p-2 border border-border;
+  @apply w-full rounded-xl border border-border bg-background px-3 py-2.5 font-sans text-sm text-foreground transition-colors focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/30 focus-visible:outline-none;
 }
 
 .input-group .input::placeholder {
-  @apply text-xs font-medium text-muted-foreground font-mono;
+  @apply font-mono text-xs font-medium text-muted-foreground;
 }
 
 .input-group .textarea {
-  @apply w-full p-2 border border-border;
+  @apply w-full rounded-xl border border-border bg-background px-3 py-2.5 font-sans text-sm text-foreground transition-colors focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/30 focus-visible:outline-none;
 }
 .input-group .textarea::placeholder {
-  @apply text-xs font-medium text-muted-foreground font-mono;
+  @apply font-mono text-xs font-medium text-muted-foreground;
 }
 
 .hover-card {

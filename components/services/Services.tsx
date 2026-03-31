@@ -33,31 +33,30 @@ const SERVICE_CARDS: ServiceCardData[] = [
   {
     tag: "Product",
     titleLead: "Build",
-    titleRest: " the best app, from scratch",
+    titleRest: " web and mobile products that last",
     whatItIs: [
-      "Design engineering oriented.",
-      "The perfect foundation for a company going mobile.",
-      "Battle tested workflow powering apps for the world's best companies.",
+      "React, React Native, and Expo from day one.",
+      "Hands-on delivery from idea to release.",
+      "A focused team that ships clearly and quickly.",
     ],
     whyUs: [
-      "Our apps are used by millions of people across the globe.",
-      "We are recommended by Expo.",
+      "Built by a Kathmandu team that owns every detail.",
+      "Small team, high standards, direct communication.",
     ],
   },
   {
     tag: "Consulting",
-    titleLead: "Extend",
-    titleRest: " your team, upgrade your app",
+    titleLead: "Improve",
+    titleRest: " your existing app with focused support",
     whatItIs: [
-      "Enterprise oriented workflow.",
-      "SDK building and maintenance.",
-      "Expo, React Native upgrades.",
-      "Custom native modules.",
-      "Brownfield work.",
+      "React Native and Expo upgrades without disruption.",
+      "Performance tuning and codebase stabilization.",
+      "Feature delivery for brownfield products.",
+      "Ongoing engineering support for your internal team.",
     ],
     whyUs: [
-      "React Native Core Contributors.",
-      "10 years of React Native specialization.",
+      "We stay practical, transparent, and accountable.",
+      "We keep improving each project over the last one.",
     ],
   },
 ]
@@ -65,54 +64,54 @@ const SERVICE_CARDS: ServiceCardData[] = [
 const SERVICE_MODALS: ServiceModalData[] = [
   {
     tag: "Product",
-    title: "From git init to the app stores",
+    title: "From first idea to production release",
     description:
-      "With nearly a decade of experience working with the world's top tech companies, we've perfected an efficient and battle-tested workflow that enables us to develop superior applications faster.",
+      "We started as freelancers and built VBEE in Kathmandu in 2024 to create better products as a team. Today we help companies launch web and mobile apps using React, React Native, and Expo with a clear, hands-on process.",
     bullets: [
       {
         icon: <Users className="h-4 w-4" />,
-        text: "Two engineers, billed monthly.",
+        text: "Dedicated team involvement from discovery to launch.",
       },
       {
         icon: <Clock className="h-4 w-4" />,
-        text: "Available 10am–5pm / EST timezone.",
+        text: "Reliable communication and consistent delivery cadence.",
       },
       {
         icon: <Smartphone className="h-4 w-4" />,
-        text: "135 hours of development, management and QA per month.",
+        text: "Web and mobile builds with React, React Native, and Expo.",
       },
       {
         icon: <MessageSquare className="h-4 w-4" />,
-        text: "Direct communication with the engineers via Slack.",
+        text: "Open collaboration with direct access to the builders.",
       },
       {
         icon: <Smartphone className="h-4 w-4" />,
-        text: "New applications built with React Native + Expo.",
+        text: "Strong ownership of code quality and shipped outcomes.",
       },
     ],
     ctaLabel: "Book a discovery call",
   },
   {
     tag: "Consulting",
-    title: "Consulting",
+    title: "Expert support for scaling products",
     description:
-      "With React Native core contributors on our team, our deep technical expertise enables companies to build the best mobile products through focused consulting, performance optimization, and strategic engineering support.",
+      "If your app is already live, we plug in where you need us most. From upgrades and performance work to feature expansion, we help teams move forward with confidence while keeping product quality high.",
     bullets: [
       {
         icon: <User className="h-4 w-4" />,
-        text: "One engineer from our consulting team, billed hourly.",
+        text: "Flexible engineering support based on your current priorities.",
       },
       {
         icon: <Clock className="h-4 w-4" />,
-        text: "Available 10am–5pm / EST timezone.",
+        text: "Fast responses and practical decisions during implementation.",
       },
       {
         icon: <MessageSquare className="h-4 w-4" />,
-        text: "Direct communication with the engineers via Slack.",
+        text: "Clear communication with the engineers doing the work.",
       },
       {
         icon: <Activity className="h-4 w-4" />,
-        text: "Performance audits, targeted support, native capabilities etc…",
+        text: "Performance improvements, upgrades, and maintainable delivery.",
       },
     ],
     ctaLabel: "Book a discovery call",
@@ -212,7 +211,7 @@ function ServiceCard({
         </h3>
       </div>
 
-      <div className="mt-6 hidden border-t border-border/80 pt-6 md:block">
+      <div className="mt-6 hidden border-t border-foreground/20 pt-6 md:block dark:border-border/80">
         <p className="font-mono text-xs font-medium tracking-wide text-muted-foreground uppercase">
           What it is
         </p>
@@ -223,7 +222,7 @@ function ServiceCard({
         </ul>
       </div>
 
-      <div className="mt-6 hidden border-t border-border/80 pt-6 md:block">
+      <div className="mt-6 hidden border-t border-foreground/20 pt-6 md:block dark:border-border/80">
         <p className="font-mono text-xs font-medium tracking-wide text-muted-foreground uppercase">
           Why us
         </p>
@@ -269,11 +268,11 @@ const Services = () => {
           Services
         </span>
         <h2 className="mt-2 font-sans text-2xl font-semibold">
-          Greenfield, brownfield, we do it all.
+          Built in Kathmandu, delivered everywhere.
         </h2>
         <h2 className="font-sans text-2xl font-semibold text-muted-foreground">
-          Wheather you are building a new application or need support on an
-          existing one, we are here to help.
+          Whether you are launching from scratch or improving an existing app,
+          our team of five builds with React, React Native, and Expo.
         </h2>
       </div>
 
@@ -332,13 +331,9 @@ const Services = () => {
           </div>
           <span className="font-mono text-xs">OUR STANCE ON AI</span>
           <p className="px-4 text-center font-sans text-sm leading-relaxed">
-            We use Agentic AI technology to help us write better code, faster.
-            It is the perfect co-pilot, pairing with our taste and expertise.
-            While it helps us produce the code, we take full ownership of
-            whatever we ship. We have not outsourced our work to machines, nor
-            our judgment. Careful review and skillful training of both teammates
-            and agents is, for us, an integral part of the path forward in the
-            AI era.
+            We use AI as a supporting tool, not a replacement for engineering
+            judgment. We still write with care, review thoroughly, and take full
+            ownership of every line we ship to clients.
           </p>
         </div>
       </div>
