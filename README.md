@@ -1,12 +1,18 @@
-<table align="center" cellpadding="24" cellspacing="0" border="0">
-  <tr>
-    <td align="center" bgcolor="#18181b">
-      <a href="https://vbee.studio" title="VBEE Studio">
-        <img src="public/VBee_white.png" alt="VBEE Studio" width="280" />
-      </a>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://vbee.studio" title="VBEE Studio">
+    <picture>
+      <source
+        media="(prefers-color-scheme: dark)"
+        srcset="public/VBee_white.png"
+      />
+      <img
+        src="public/VBEE_dark.png"
+        alt="VBEE Studio"
+        width="280"
+      />
+    </picture>
+  </a>
+</p>
 
 <h1 align="center">VBEE Studio</h1>
 
