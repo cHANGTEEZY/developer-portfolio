@@ -1,3 +1,13 @@
+<table align="center" cellpadding="24" cellspacing="0" border="0">
+  <tr>
+    <td align="center" bgcolor="#18181b">
+      <a href="https://vbee.studio" title="VBEE Studio">
+        <img src="public/VBee_white.png" alt="VBEE Studio" width="280" />
+      </a>
+    </td>
+  </tr>
+</table>
+
 <h1 align="center">VBEE Studio</h1>
 
 <p align="center">
