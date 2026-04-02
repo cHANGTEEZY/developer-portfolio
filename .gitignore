@@ -7,6 +7,10 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+.pnpm-store/
+.pnpm-store/*
+.pnpm-store/v10
+.pnpm-store
 
 # testing
 /coverage

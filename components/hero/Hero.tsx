@@ -12,8 +12,51 @@ import ComputerModal from "./ComputerModal"
 import { Html, OrbitControls } from "@react-three/drei"
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib"
 import * as THREE from "three"
+import type { Group } from "three"
 import type { PerspectiveCamera } from "three"
 import { LazyLoader } from "../shell"
+
+/** Extra Y rotation (rad) applied on scroll — model keeps its existing `rotation` pose at rest. */
+const SCROLL_Y_NUDGE = THREE.MathUtils.degToRad(14)
+const SCROLL_ROT_DAMP = 8.5
+
+function ScrollDrivenModel() {
+  const groupRef = useRef<Group>(null)
+  const scroll01 = useRef(0)
+
+  useEffect(() => {
+    const update = () => {
+      const el = document.getElementById("hero-stage")
+      if (!el) return
+      const range = Math.max(120, el.getBoundingClientRect().height * 0.5)
+      scroll01.current = THREE.MathUtils.clamp(window.scrollY / range, 0, 1)
+    }
+    window.addEventListener("scroll", update, { passive: true })
+    window.addEventListener("resize", update)
+    update()
+    return () => {
+      window.removeEventListener("scroll", update)
+      window.removeEventListener("resize", update)
+    }
+  }, [])
+
+  useFrame((_, delta) => {
+    if (!groupRef.current) return
+    const targetY = SCROLL_Y_NUDGE * scroll01.current
+    groupRef.current.rotation.y = THREE.MathUtils.damp(
+      groupRef.current.rotation.y,
+      targetY,
+      SCROLL_ROT_DAMP,
+      delta
+    )
+  })
+
+  return (
+    <group ref={groupRef}>
+      <ComputerModal yOffset={4} rotation={[0, 20.4, 0]} />
+    </group>
+  )
+}
 
 const CAMERA_BREAKPOINTS = [
   {
@@ -233,7 +276,7 @@ function HeroOrbit() {
 
 const Hero = () => {
   return (
-    <div className="relative h-[min(80vh,900px)] w-full">
+    <div id="hero-stage" className="relative h-[min(80vh,900px)] w-full">
       <Canvas
         className="relative z-10 touch-none"
         camera={{ position: [45, 14, 28], fov: 50 }}
@@ -257,7 +300,7 @@ const Hero = () => {
             </Html>
           }
         >
-          <ComputerModal yOffset={4} rotation={[0, 20.4, 0]} />
+          <ScrollDrivenModel />
         </Suspense>
         <HeroOrbit />
       </Canvas>

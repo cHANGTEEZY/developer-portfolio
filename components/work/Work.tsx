@@ -7,7 +7,7 @@ const Work = () => {
   return (
     <LayoutWrapper maxWidth="sm" padding="none">
       <section>
-        <div className="flex items-center justify-between border-b border-muted py-10">
+        <div className="flex items-center justify-between border-b border-muted px-5 py-10 md:px-2">
           <h1 className="font-maru text-3xl font-bold">Work</h1>
           <span className="font-mono text-xs text-muted-foreground">
             3 YEARS, 35+ Projects
@@ -15,7 +15,10 @@ const Work = () => {
         </div>
         <div className="grid grid-cols-1 space-y-10 py-10">
           {WORK.map((work: (typeof WORK)[number]) => (
-            <div key={work.title} className="flex items-center justify-between">
+            <div
+              key={work.title}
+              className="flex items-center justify-between px-5 md:px-2"
+            >
               <div className="flex items-center gap-2">
                 <Image
                   src={work.image}
@@ -33,7 +36,7 @@ const Work = () => {
         </div>
       </section>
       <section>
-        <div className="flex items-center justify-between border-t border-muted py-6">
+        <div className="flex items-center justify-between border-t border-muted px-5 py-6 md:px-2">
           <h1 className="font-maru text-3xl font-bold">About</h1>
           <div className="flex flex-col gap-2">
             <p className="font-mono text-xs text-muted-foreground">
@@ -50,7 +53,7 @@ const Work = () => {
             there was just freelance work. Late nights in Kathmandu, shipping
             code for clients, solving problems solo.
           </p>
-          <p className="max-w-[68ch] font-sans text-sm leading-7 tracking-[0.01em] text-foreground/90">
+          <p className="max-x w-[68ch] font-sans text-sm leading-7 tracking-[0.01em] text-foreground/90">
             The work was good. But after a while it became clear that the best
             products are not built by one person. Nepal has a lot of talented
             developers. The idea was simple: bring the right people together,
@@ -67,9 +70,25 @@ const Work = () => {
             Today we are a team of five. Small, focused, and hands on with every
             project we take. We keep things straightforward. Write good code,
             talk openly with clients, own our work fully, and always try to do
-            better than the last time. Kathmandu is where we are. Everywhere else
-            is where we deliver.
+            better than the last time. Kathmandu is where we are. Everywhere
+            else is where we deliver.
           </p>
+        </div>
+        <div className="px-5 py-6">
+          <Image
+            src={"/kathmandu_dark.png"}
+            alt="Kathmandu"
+            className="hidden h-full w-full object-cover dark:block"
+            height={"1000"}
+            width={"1000"}
+          />
+          <Image
+            src={"/kathmandu_white.png"}
+            alt="Kathmandu"
+            className="block h-full w-full object-cover dark:hidden"
+            height={"1000"}
+            width={"1000"}
+          />
         </div>
       </section>
     </LayoutWrapper>

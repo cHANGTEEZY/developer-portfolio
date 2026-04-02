@@ -47,13 +47,13 @@ export default function HomePage() {
           <Expertise />
         </div>
       </LayoutWrapper>
-      <LayoutWrapper maxWidth="full" padding="tight">
-        <div className="rounded-3xl bg-muted/30">
+      <LayoutWrapper maxWidth="full" padding="tight" className="bg-muted/30">
+        <div className="rounded-3xl">
           <Work />
+          <LayoutWrapper maxWidth="sm" padding="none">
+            <Footer />
+          </LayoutWrapper>
         </div>
-      </LayoutWrapper>
-      <LayoutWrapper maxWidth="sm" padding="none">
-        <Footer />
       </LayoutWrapper>
     </>
   )
