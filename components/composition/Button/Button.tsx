@@ -45,6 +45,7 @@ const Button = ({
   loading,
   className,
   behavior,
+  type = "button",
   "aria-label": ariaLabel,
 }: {
   children: React.ReactNode
@@ -56,6 +57,8 @@ const Button = ({
   className?: string
   /** Extra motion/feedback. `cta` nudges the icon right on hover (works best with a trailing `Button.Icon`). */
   behavior?: ButtonBehavior
+  /** Use `submit` inside a `<form>` so Enter submits fields. */
+  type?: "button" | "submit" | "reset"
   "aria-label"?: string
 }) => {
   const resolvedBehavior: ButtonBehavior = behavior ?? "default"
@@ -72,7 +75,7 @@ const Button = ({
   return (
     <ButtonContext.Provider value={contextValue}>
       <button
-        type="button"
+        type={type}
         data-slot="composition-button"
         aria-busy={loading}
         aria-label={ariaLabel}
