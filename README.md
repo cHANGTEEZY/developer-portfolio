@@ -10,53 +10,51 @@
   <a href="mailto:sales@vbee.studio"><img src="https://img.shields.io/badge/email-sales%40vbee.studio-27272a?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=222" alt="React" />
-  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-</p>
-
 ---
 
-VBEE Studio is the **Kathmandu-based** team behind product-grade **React**, **React Native**, and **Expo** work. We ship web and mobile apps with a **small team**, **direct communication**, and **clear ownership** of quality— the same story you see on [vbee.studio](https://vbee.studio).
+VBEE Studio is a **Kathmandu-based** React and React Native engineering studio. We partner with companies around the world to help them get the most out of **React**, **React Native**, and **Expo**—with a small team, direct communication, and clear ownership of what we ship.
 
-### What we do
+## Our story
 
-| Focus        | In practice                                                                 |
-| ------------ | ----------------------------------------------------------------------------- |
-| **Product**  | Discovery → release: web & mobile builds that last, hands-on from day one.    |
-| **Consulting** | RN / Expo upgrades, performance, brownfield features, ongoing support.    |
+It started alone, with a laptop and a deadline: freelance work, late nights, shipping for clients. The work was good, but the best products are not built by one person. Nepal has deep talent—the idea was to bring the right people together, hold a high bar, and build products that stand up anywhere.
 
-### This repository
+**VBEE was founded in Kathmandu in 2024.** Today we are a team of **five**: small, focused, and hands-on with every engagement. We write solid code, talk openly with clients, own outcomes end to end, and aim to do better on each project than the last.
 
-This repo is our **marketing site and portfolio**: interactive hero, work and expertise sections, services, and a **contact flow** (email via API). The UI follows our in-product system—**light/dark** themes, **coral** primary accent on **zinc** neutrals, **rounded display type**, and **monospace** for labels and secondary copy.
+**Kathmandu is where we are. Everywhere else is where we deliver.**
 
-### Run it locally
+## What we do
 
-```bash
-npm install
-npm run dev
-```
+### Product — build web and mobile products that last
 
-Open [http://localhost:3000](http://localhost:3000). Asset preparation runs automatically before `dev` and `build` via `prepare-assets`.
+- React, React Native, and Expo from day one  
+- Hands-on delivery from idea to release  
+- A focused team that ships clearly and quickly  
 
-### UI components (shadcn)
+We stay involved from discovery through launch: reliable communication, web and mobile builds, and strong ownership of code quality and shipped outcomes.
 
-Add a component when you extend the UI:
+### Consulting — improve existing apps with focused support
 
-```bash
-npx shadcn@latest add button
-```
+- React Native and Expo upgrades without needless disruption  
+- Performance tuning and codebase stabilization  
+- Features for brownfield products  
+- Ongoing engineering support for your internal team  
 
-Import from `@/components/ui/…` as usual.
+We plug in where you need us—practical, transparent, and accountable through implementation.
 
-### Connect
+## Expertise
 
-|     |                                                              |
-| --- | ------------------------------------------------------------ |
-| Web | [vbee.studio](https://vbee.studio)                           |
-| Mail | [sales@vbee.studio](mailto:sales@vbee.studio)               |
-| GitHub | [github.com/cHANGTEEZY](https://github.com/cHANGTEEZY)   |
+We align with how the world’s top brands use React Native—including names like the **NFL**, **Pizza Hut**, and **Microsoft**. We built on React Native and its ecosystem from day one and continue as an active partner in that community—**full-stack** work and **custom** solutions when you need something tailored.
+
+## Track record
+
+**3 years · 35+ projects** across web and mobile for clients worldwide.
+
+## Connect
+
+|        |                                                              |
+| ------ | ------------------------------------------------------------ |
+| Web    | [vbee.studio](https://vbee.studio)                           |
+| Email  | [sales@vbee.studio](mailto:sales@vbee.studio)               |
+| GitHub | [github.com/cHANGTEEZY](https://github.com/cHANGTEEZY)       |
 
 <p align="center"><sub>© VBEE Studio — React &amp; React Native engineering from Kathmandu.</sub></p>
