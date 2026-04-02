@@ -6,6 +6,7 @@ import {
   useEffect,
   useLayoutEffect,
   useRef,
+  useState,
 } from "react"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import ComputerModal from "./ComputerModal"
@@ -126,9 +127,11 @@ function WebglContextGuard() {
   return null
 }
 
-function HeroOrbit() {
+function HeroOrbit({ orbitAllowed }: { orbitAllowed: boolean }) {
   const { get, gl } = useThree()
   const orbitRef = useRef<OrbitControlsImpl>(null)
+  const orbitAllowedRef = useRef(orbitAllowed)
+  orbitAllowedRef.current = orbitAllowed
   const homePos = useRef(new THREE.Vector3())
   const homeFov = useRef(50)
   const returning = useRef(false)
@@ -177,6 +180,7 @@ function HeroOrbit() {
   useEffect(() => {
     const el = gl.domElement
     const onPointerLeave = () => {
+      if (!orbitAllowedRef.current) return
       returning.current = true
     }
     el.addEventListener("pointerleave", onPointerLeave)
@@ -247,7 +251,7 @@ function HeroOrbit() {
       ctrl.update()
       returning.current = false
       returnArmed.current = false
-      ctrl.enabled = true
+      ctrl.enabled = orbitAllowedRef.current
     }
   })
 
@@ -255,6 +259,7 @@ function HeroOrbit() {
     <OrbitControls
       ref={orbitRef}
       makeDefault
+      enabled={orbitAllowed}
       enableZoom={false}
       enablePan={false}
       enableDamping
@@ -275,10 +280,21 @@ function HeroOrbit() {
 }
 
 const Hero = () => {
+  /** Touch-primary devices: keep page scroll; scroll still nudges the model via ScrollDrivenModel. */
+  const [orbitAllowed, setOrbitAllowed] = useState(true)
+
+  useEffect(() => {
+    const mq = window.matchMedia("(pointer: coarse)")
+    const apply = () => setOrbitAllowed(!mq.matches)
+    apply()
+    mq.addEventListener("change", apply)
+    return () => mq.removeEventListener("change", apply)
+  }, [])
+
   return (
     <div id="hero-stage" className="relative h-[min(80vh,900px)] w-full">
       <Canvas
-        className="relative z-10 touch-none"
+        className="relative z-10"
         camera={{ position: [45, 14, 28], fov: 50 }}
         dpr={[1, 1.75]}
         gl={{
@@ -302,7 +318,7 @@ const Hero = () => {
         >
           <ScrollDrivenModel />
         </Suspense>
-        <HeroOrbit />
+        <HeroOrbit orbitAllowed={orbitAllowed} />
       </Canvas>
     </div>
   )
