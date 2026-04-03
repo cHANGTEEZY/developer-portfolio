@@ -6,6 +6,9 @@ import Expertise from "@/components/expertise/Expertise"
 import Footer from "@/components/footer/Footer"
 import Work from "@/components/work/Work"
 import Services from "@/components/services/Services"
+import DarkModeToggle from "@/components/DarkModeToggle"
+import Process from "@/components/process/Process"
+import Testimonials from "@/components/testimonials/Testimonials"
 
 export default function HomePage() {
   return (
@@ -14,7 +17,7 @@ export default function HomePage() {
         <Navbar />
       </LayoutWrapper>
       <LayoutWrapper maxWidth="full" padding="none">
-        <div className="relative h-[min(80vh,900px)] w-full overflow-hidden">
+        <div className="relative h-[60dvh] w-full overflow-hidden sm:h-[min(80vh,900px)]">
           <div className="pointer-events-none absolute inset-0 z-0">
             <LayoutWrapper
               maxWidth="full"
@@ -44,8 +47,14 @@ export default function HomePage() {
           <Services />
         </div>
         <div className="mt-32">
+          <Process />
+        </div>
+        <div className="mt-32">
           <Expertise />
         </div>
+      </LayoutWrapper>
+      <LayoutWrapper maxWidth="full" padding="tight" className="mt-16 sm:mt-20">
+        <Testimonials />
       </LayoutWrapper>
       <LayoutWrapper maxWidth="full" padding="tight" className="bg-muted/30">
         <div className="rounded-3xl">
@@ -55,6 +64,8 @@ export default function HomePage() {
           </LayoutWrapper>
         </div>
       </LayoutWrapper>
+
+      <DarkModeToggle />
     </>
   )
 }

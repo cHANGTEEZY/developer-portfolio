@@ -53,7 +53,7 @@ const Work = () => {
             there was just freelance work. Late nights in Kathmandu, shipping
             code for clients, solving problems solo.
           </p>
-          <p className="max-x w-[68ch] font-sans text-sm leading-7 tracking-[0.01em] text-foreground/90">
+          <p className="max-w-[68ch] font-sans text-sm leading-7 tracking-[0.01em] text-foreground/90">
             The work was good. But after a while it became clear that the best
             products are not built by one person. Nepal has a lot of talented
             developers. The idea was simple: bring the right people together,

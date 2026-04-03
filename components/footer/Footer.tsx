@@ -59,10 +59,10 @@ const Footer = () => {
               Connect
             </p>
             <a
-              href="mailto:sales@vbee.studio"
+              href="mailto:vbee-studio@sushankgurung.com"
               className="block font-mono text-sm text-foreground/90 underline decoration-border underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
             >
-              sales@vbee.studio
+              vbee-studio@sushankgurung.com
             </a>
           </div>
 

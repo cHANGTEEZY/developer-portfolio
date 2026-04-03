@@ -12,7 +12,7 @@ const from =
   process.env.RESEND_FROM ?? "VBEE Studio <onboarding@resend.dev>"
 
 
-const inboxTo = process.env.RESEND_TO ?? "sushankgurung2002@gmail.com"
+const inboxTo = process.env.RESEND_TO ?? "vbee-studio@sushankgurung.com"
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 

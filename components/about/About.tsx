@@ -16,9 +16,9 @@ const About = () => {
       <Image src={"/react10.png"} alt="React logo" width={100} height={100} />
 
       <header className="max-w-2xl space-y-8">
-        <h1 className="text-center font-sans text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+        <h2 className="text-center font-sans text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
           React & React Native <br /> Engineering Studio
-        </h1>
+        </h2>
 
         <p className="max-w-[500px] px-6 text-center font-mono text-sm leading-relaxed text-muted-foreground sm:px-0">
           VBEE Studio is a Kathmandu-based React & React Native engineering
@@ -45,10 +45,12 @@ const About = () => {
         <Tooltip>
           <TooltipTrigger mode="click" decay="immediate">
             <button
-              onClick={() => navigator.clipboard.writeText("sales@vbee.studio")}
+              onClick={() =>
+                navigator.clipboard.writeText("vbee-studio@sushankgurung.com")
+              }
               className="cursor-pointer text-sm italic"
             >
-              sales@vbee.studio
+              vbee-studio@sushankgurung.com
             </button>
           </TooltipTrigger>
           <TooltipContent variant="default" size="sm" position="bottom">

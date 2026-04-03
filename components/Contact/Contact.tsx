@@ -148,7 +148,7 @@ const Contact = () => {
                   type="email"
                   required
                   autoComplete="email"
-                  placeholder="artour@vbee.studio"
+                  placeholder="vbee-studio@sushankgurung.com"
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })

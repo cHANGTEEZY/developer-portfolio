@@ -13,6 +13,8 @@ import {
 import Image from "next/image"
 import { useEffect, useMemo, useState, type ReactNode } from "react"
 
+import { TechStackLogos } from "./TechStackLogos"
+
 type ServiceCardData = {
   tag: string
   titleLead: string
@@ -262,86 +264,89 @@ const Services = () => {
   const activeModal = openTag ? modalByTag.get(openTag) : null
 
   return (
-    <section className="rounded-[2rem] bg-muted-foreground/10 p-6">
-      <div className="mt-5 px-10">
-        <span className="font-mono text-xs text-muted-foreground">
-          Services
-        </span>
-        <h2 className="mt-2 font-sans text-2xl font-semibold">
-          Built in Kathmandu, delivered everywhere.
-        </h2>
-        <h2 className="font-sans text-2xl font-semibold text-muted-foreground">
-          Whether you are launching from scratch or improving an existing app,
-          our team of five builds with React, React Native, and Expo.
-        </h2>
-      </div>
-
-      <div className="flex flex-col gap-6">
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 md:items-stretch">
-          {SERVICE_CARDS.map((card) => (
-            <ServiceCard
-              key={card.tag}
-              {...card}
-              onOpen={() => setOpenTag(card.tag)}
-            />
-          ))}
+    <>
+      <TechStackLogos className="mb-10 sm:mb-12" />
+      <section className="rounded-[2rem] bg-muted-foreground/10 p-6">
+        <div className="mt-5 px-10">
+          <span className="font-mono text-xs text-muted-foreground">
+            Services
+          </span>
+          <h2 className="mt-2 font-sans text-2xl font-semibold">
+            Built in Kathmandu, delivered everywhere.
+          </h2>
+          <h2 className="font-sans text-2xl font-semibold text-muted-foreground">
+            Whether you are launching from scratch or improving an existing app,
+            our team of five builds with React, React Native, and Expo.
+          </h2>
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-4 rounded-[2rem] bg-[#e6e6e6] p-8 dark:bg-muted/45">
-          <div className="flex items-center justify-center gap-3">
-            <div className="relative h-10 w-auto">
-              <Image
-                src="/VBEE_dark.png"
-                alt="VBEE"
-                width={54}
-                height={40}
-                className="block h-10 w-auto dark:hidden"
-                priority={false}
+        <div className="flex flex-col gap-6">
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 md:items-stretch">
+            {SERVICE_CARDS.map((card) => (
+              <ServiceCard
+                key={card.tag}
+                {...card}
+                onOpen={() => setOpenTag(card.tag)}
               />
-              <Image
-                src="/VBee_white.png"
-                alt="VBEE"
-                width={54}
-                height={40}
-                className="hidden h-10 w-auto dark:block"
-                priority={false}
-              />
-            </div>
-
-            <span className="font-mono text-xs text-muted-foreground">X</span>
-
-            <div className="relative h-10 w-auto">
-              <Image
-                src="/aiStatementLight.webp"
-                alt="AI statement"
-                width={96}
-                height={40}
-                className="block h-10 w-auto dark:hidden"
-                priority={false}
-              />
-              <Image
-                src="/aiStatementDark.webp"
-                alt="AI statement"
-                width={96}
-                height={40}
-                className="hidden h-10 w-auto dark:block"
-                priority={false}
-              />
-            </div>
+            ))}
           </div>
-          <span className="font-mono text-xs">OUR STANCE ON AI</span>
-          <p className="px-4 text-center font-sans text-sm leading-relaxed">
-            We use AI as a supporting tool, not a replacement for engineering
-            judgment. We still write with care, review thoroughly, and take full
-            ownership of every line we ship to clients.
-          </p>
-        </div>
-      </div>
 
-      {activeModal ? (
-        <ServiceModal modal={activeModal} onClose={() => setOpenTag(null)} />
-      ) : null}
-    </section>
+          <div className="flex flex-col items-center justify-center gap-4 rounded-[2rem] bg-[#e6e6e6] p-8 dark:bg-muted/45">
+            <div className="flex items-center justify-center gap-3">
+              <div className="relative h-10 w-auto">
+                <Image
+                  src="/VBEE_dark.png"
+                  alt="VBEE"
+                  width={54}
+                  height={40}
+                  className="block h-10 w-auto dark:hidden"
+                  priority={false}
+                />
+                <Image
+                  src="/VBee_white.png"
+                  alt="VBEE"
+                  width={54}
+                  height={40}
+                  className="hidden h-10 w-auto dark:block"
+                  priority={false}
+                />
+              </div>
+
+              <span className="font-mono text-xs text-muted-foreground">X</span>
+
+              <div className="relative h-10 w-auto">
+                <Image
+                  src="/aiStatementLight.webp"
+                  alt="AI statement"
+                  width={96}
+                  height={40}
+                  className="block h-10 w-auto dark:hidden"
+                  priority={false}
+                />
+                <Image
+                  src="/aiStatementDark.webp"
+                  alt="AI statement"
+                  width={96}
+                  height={40}
+                  className="hidden h-10 w-auto dark:block"
+                  priority={false}
+                />
+              </div>
+            </div>
+            <span className="font-mono text-xs">OUR STANCE ON AI</span>
+            <p className="px-4 text-center font-sans text-sm leading-relaxed">
+              We use AI as a supporting tool, not a replacement for engineering
+              judgment. We still write with care, review thoroughly, and take
+              full ownership of every line we ship to clients.
+            </p>
+          </div>
+        </div>
+
+        {activeModal ? (
+          <ServiceModal modal={activeModal} onClose={() => setOpenTag(null)} />
+        ) : null}
+      </section>
+    </>
   )
 }
 

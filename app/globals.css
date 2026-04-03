@@ -49,6 +49,7 @@
     --radius-4xl: calc(var(--radius) * 2.6);
     /* Infinite marquee */
     --animate-marquee: marquee 45s linear infinite;
+    --animate-marquee-reverse: marquee-reverse 45s linear infinite;
 }
 
 :root {
@@ -143,6 +144,15 @@
   }
   to {
     transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
 
