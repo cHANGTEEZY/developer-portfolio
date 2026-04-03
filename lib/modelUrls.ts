@@ -10,7 +10,5 @@ function withBasePath(path: `/${string}`): string {
   return `${normalized}${path}`
 }
 
-/** Killer Beats cassette mixstation — scene + scene.bin + textures/ */
-export const KILLER_BEATS_SCENE_GLTF = withBasePath(
-  "/models/killer_beats_casette_mixstation/scene.gltf"
-)
+/** Killer Beats cassette mixstation — hosted on UploadThing; see `killerBeatsCdn.ts`. */
+export { KILLER_BEATS_SCENE_GLTF_URL as KILLER_BEATS_SCENE_GLTF } from "./killerBeatsCdn"
