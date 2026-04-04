@@ -33,8 +33,8 @@ export const siteConfig = {
     "https://www.linkedin.com/in/sushank-gurung/",
     "https://x.com/SushankGurung",
   ],
-  /** Prefer a 1200×630 asset when you add one; this works as a social preview fallback. */
-  defaultOgImage: "/profile-hero.png",
+  /** Open Graph / Twitter card image (public path). */
+  defaultOgImage: "/VBee_white.png",
 } as const
 
 export function organizationJsonLd() {

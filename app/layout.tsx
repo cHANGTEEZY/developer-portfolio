@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: siteConfig.defaultOgImage,
-        alt: `${siteConfig.name} — portfolio and services`,
+        alt: `${siteConfig.name} — branding`,
       },
     ],
   },
