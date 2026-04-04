@@ -33,34 +33,42 @@ const STEPS: StepDef[] = [
   },
 ]
 
-const TIMELINE_DATA: TimelineEntry[] = STEPS.map((step, index) => ({
-  title: step.title,
-  content: (
-    <div className="space-y-4">
-      <p className="font-mono text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground sm:text-sm md:text-base">
-        <span className="text-foreground">{step.code}</span>
-        <span className="text-muted-foreground/70"> · </span>
-        <span>
-          Step {index + 1} of {STEPS.length}
-        </span>
-      </p>
-      <p className="max-w-prose font-sans text-sm leading-relaxed text-muted-foreground">
-        {step.description}
-      </p>
-    </div>
-  ),
-}))
+const TIMELINE_DATA: TimelineEntry[] = STEPS.map((step, index) => {
+  const n = index + 1
+  const total = STEPS.length
+
+  return {
+    title: step.title,
+    content: (
+      <div className="space-y-5">
+        <p className="font-mono text-xs leading-none text-muted-foreground">
+          <span className="text-foreground">{step.code}</span>
+          <span className="px-2 text-muted-foreground/50">—</span>
+          <span>
+            {n} of {total}
+          </span>
+        </p>
+        <p className="max-w-[68ch] font-sans text-sm leading-7 tracking-[0.01em] text-foreground/90">
+          {step.description}
+        </p>
+      </div>
+    ),
+  }
+})
 
 const Process = () => {
   return (
-    <section aria-labelledby="process-heading">
+    <section
+      className="border-b border-muted pb-10 md:pb-14"
+      aria-labelledby="process-heading"
+    >
       <div className="flex flex-col gap-2">
         <span className="font-mono text-xs text-muted-foreground">
           HOW WE WORK
         </span>
         <h2
           id="process-heading"
-          className="text-2xl font-bold tracking-tight sm:text-3xl"
+          className="font-maru text-2xl font-bold tracking-tight sm:text-3xl"
         >
           From discovery to ship
         </h2>

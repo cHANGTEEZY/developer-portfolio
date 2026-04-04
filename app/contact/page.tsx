@@ -23,12 +23,14 @@ export const metadata: Metadata = {
 const ContactPage = () => {
   return (
     <>
-      <LayoutWrapper maxWidth="sm" padding="none">
-        <Navbar variant="contact" />
-      </LayoutWrapper>
-      <LayoutWrapper maxWidth="sm" padding="comfortable">
-        <Contact />
-      </LayoutWrapper>
+      <main className="flex flex-1 flex-col">
+        <LayoutWrapper maxWidth="sm" padding="none">
+          <Navbar variant="contact" />
+        </LayoutWrapper>
+        <LayoutWrapper maxWidth="sm" padding="comfortable">
+          <Contact />
+        </LayoutWrapper>
+      </main>
       <LayoutWrapper maxWidth="full" padding="tight" className="bg-muted/30">
         <LayoutWrapper maxWidth="sm" padding="none">
           <Footer />

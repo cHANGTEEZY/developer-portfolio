@@ -16,7 +16,7 @@ function ThemeProvider({
       {...props}
     >
       <ThemeHotkey />
-      {children}
+      <div className="flex min-h-dvh flex-col">{children}</div>
     </NextThemesProvider>
   )
 }

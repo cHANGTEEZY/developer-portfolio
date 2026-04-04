@@ -2,6 +2,7 @@
 
 import { HugeiconsIcon } from "@hugeicons/react"
 import { ArrowRight02Icon } from "@hugeicons/core-free-icons"
+import { useRouter } from "next/navigation"
 
 import Button from "../composition/Button"
 import Tooltip, {
@@ -11,6 +12,8 @@ import Tooltip, {
 import Image from "next/image"
 
 const About = () => {
+  const router = useRouter()
+
   return (
     <div className="flex flex-col items-center justify-center gap-[34px]">
       <Image src={"/react10.png"} alt="React logo" width={100} height={100} />
@@ -29,7 +32,7 @@ const About = () => {
 
       <div className="flex flex-col items-center justify-center gap-3">
         <Button
-          onClick={() => console.log("clicked")}
+          onClick={() => router.push("/contact")}
           variant="primary"
           size="medium"
           loading={false}

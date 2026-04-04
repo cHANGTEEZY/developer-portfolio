@@ -11,6 +11,7 @@ import {
   X,
 } from "lucide-react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { useEffect, useMemo, useState, type ReactNode } from "react"
 
 import { TechStackLogos } from "./TechStackLogos"
@@ -127,6 +128,8 @@ function ServiceModal({
   modal: ServiceModalData
   onClose: () => void
 }) {
+  const router = useRouter()
+
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose()
@@ -180,6 +183,10 @@ function ServiceModal({
         <div className="mt-10">
           <button
             type="button"
+            onClick={() => {
+              onClose()
+              router.push("/contact")
+            }}
             className="rounded-full bg-foreground px-6 py-3 font-sans text-sm font-medium text-background transition-colors hover:opacity-90"
           >
             {modal.ctaLabel}

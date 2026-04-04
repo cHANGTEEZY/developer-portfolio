@@ -13,49 +13,51 @@ import Testimonials from "@/components/testimonials/Testimonials"
 export default function HomePage() {
   return (
     <>
-      <LayoutWrapper maxWidth="sm" padding="none">
-        <Navbar />
-      </LayoutWrapper>
-      <LayoutWrapper maxWidth="full" padding="none">
-        <div className="relative h-[60dvh] w-full overflow-hidden sm:h-[min(80vh,900px)]">
-          <div className="pointer-events-none absolute inset-0 z-0">
+      <main className="flex flex-1 flex-col">
+        <LayoutWrapper maxWidth="sm" padding="none">
+          <Navbar />
+        </LayoutWrapper>
+        <LayoutWrapper maxWidth="full" padding="none">
+          <div className="relative h-[60dvh] w-full overflow-hidden sm:h-[min(80vh,900px)]">
+            <div className="pointer-events-none absolute inset-0 z-0">
+              <LayoutWrapper
+                maxWidth="full"
+                padding="none"
+                className="flex h-full min-w-0 items-center"
+              >
+                <div
+                  className="h-full w-full max-w-screen-sm shrink-0 lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl"
+                  aria-hidden
+                />
+              </LayoutWrapper>
+            </div>
             <LayoutWrapper
-              maxWidth="full"
+              maxWidth="sm"
               padding="none"
-              className="flex h-full min-w-0 items-center"
+              className="relative z-10 h-full min-w-0 lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl"
             >
-              <div
-                className="h-full w-full max-w-screen-sm shrink-0"
-                aria-hidden
-              />
+              <Hero />
             </LayoutWrapper>
           </div>
-          <LayoutWrapper
-            maxWidth="sm"
-            padding="none"
-            className="relative z-10 h-full min-w-0"
-          >
-            <Hero />
-          </LayoutWrapper>
-        </div>
-      </LayoutWrapper>
-      <LayoutWrapper maxWidth="sm" padding="none">
-        <div className="mt-12">
-          <About />
-        </div>
-        <div className="mt-32">
-          <Services />
-        </div>
-        <div className="mt-32">
-          <Process />
-        </div>
-        <div className="mt-32">
-          <Expertise />
-        </div>
-      </LayoutWrapper>
-      <LayoutWrapper maxWidth="full" padding="tight" className="mt-16 sm:mt-20">
-        <Testimonials />
-      </LayoutWrapper>
+        </LayoutWrapper>
+        <LayoutWrapper maxWidth="sm" padding="none">
+          <div className="mt-12">
+            <About />
+          </div>
+          <div className="mt-32">
+            <Services />
+          </div>
+          <div className="mt-32">
+            <Process />
+          </div>
+          <div className="mt-32">
+            <Expertise />
+          </div>
+        </LayoutWrapper>
+        <LayoutWrapper maxWidth="full" padding="tight" className="mt-16 sm:mt-20">
+          <Testimonials />
+        </LayoutWrapper>
+      </main>
       <LayoutWrapper maxWidth="full" padding="tight" className="bg-muted/30">
         <div className="rounded-3xl">
           <Work />
