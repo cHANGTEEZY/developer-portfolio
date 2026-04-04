@@ -11,6 +11,7 @@ const siteUrl = getSiteUrl()
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  applicationName: siteConfig.name,
   title: {
     default: `${siteConfig.name} — React & React Native engineering`,
     template: `%s | ${siteConfig.name}`,
@@ -19,10 +20,6 @@ export const metadata: Metadata = {
   keywords: [...siteConfig.keywords],
   authors: [...siteConfig.authors],
   creator: siteConfig.creator,
-  icons: {
-    icon: [{ url: "/VBEE_dark.png", type: "image/png" }],
-    apple: [{ url: "/VBEE_dark.png", type: "image/png" }],
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -33,7 +30,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: siteConfig.defaultOgImage,
-        alt: `${siteConfig.name} — branding`,
+        alt: `${siteConfig.name} — React and React Native engineering`,
       },
     ],
   },

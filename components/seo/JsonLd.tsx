@@ -1,7 +1,7 @@
-import { organizationJsonLd } from "@/lib/site"
+import { siteJsonLd } from "@/lib/site"
 
 export default function JsonLd() {
-  const data = organizationJsonLd()
+  const data = siteJsonLd()
   return (
     <script
       type="application/ld+json"

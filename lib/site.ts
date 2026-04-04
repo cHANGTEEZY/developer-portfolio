@@ -33,24 +33,45 @@ export const siteConfig = {
     "https://www.linkedin.com/in/sushank-gurung/",
     "https://x.com/SushankGurung",
   ],
-  /** Open Graph / Twitter card image (public path). */
-  defaultOgImage: "/VBee_white.png",
+  /** Open Graph / Twitter card + Organization schema image (public path). */
+  defaultOgImage: "/og-default.png",
 } as const
 
-export function organizationJsonLd() {
+const ORG_ID = "#organization"
+const WEBSITE_ID = "#website"
+
+/** Organization + WebSite JSON-LD for brand/site name signals (e.g. Google). */
+export function siteJsonLd() {
   const url = getSiteUrl()
+  const orgUrl = `${url}${ORG_ID}`
+  const websiteUrl = `${url}${WEBSITE_ID}`
+  const imageUrl = `${url}${siteConfig.defaultOgImage}`
+
   return {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: siteConfig.name,
-    description: siteConfig.description,
-    url,
-    image: `${url}${siteConfig.defaultOgImage}`,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Kathmandu",
-      addressCountry: "NP",
-    },
-    sameAs: siteConfig.sameAs,
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": orgUrl,
+        name: siteConfig.name,
+        description: siteConfig.description,
+        url,
+        image: imageUrl,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Kathmandu",
+          addressCountry: "NP",
+        },
+        sameAs: [...siteConfig.sameAs],
+      },
+      {
+        "@type": "WebSite",
+        "@id": websiteUrl,
+        url,
+        name: siteConfig.name,
+        alternateName: ["VBEE"],
+        publisher: { "@id": orgUrl },
+      },
+    ],
   }
 }
