@@ -29,9 +29,11 @@ const social = [
   },
 ] as const
 
-const year = new Date().getFullYear()
-
 const Footer = () => {
+  // Module scope runs before the Worker has a clock, so Date there is 1970.
+  // eslint-disable-next-line react/purity -- must run during the request
+  const year = new Date().getFullYear()
+
   return (
     <footer className="border-t border-muted px-5 py-10 md:px-2 md:pt-12 md:pb-12">
       <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between md:gap-12">
