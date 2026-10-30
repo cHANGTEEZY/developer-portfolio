@@ -6,7 +6,9 @@ import {
 } from "@hugeicons/core-free-icons"
 
 import CodeBlock from "@/components/CodeBlock"
+import { HairlinePiece } from "@/components/hairline/HairlinePiece"
 import { RadarBackdrop } from "@/components/not-found/RadarBackdrop"
+import { Query } from "@/components/ui/hairline"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -29,6 +31,14 @@ export default function NotFoundPage({
       <RadarBackdrop />
 
       <div className="relative z-10 flex w-full max-w-xl flex-col items-center text-center">
+        <HairlinePiece
+          figure={Query}
+          label="A question mark. This page does not exist."
+          intensity={0.75}
+          play
+          tone="void"
+          className="mb-8 max-w-[200px]"
+        />
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           404: System Timeout
         </h1>

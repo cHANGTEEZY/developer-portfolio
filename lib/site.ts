@@ -14,6 +14,10 @@ export function getSiteUrl(): string {
 export const siteConfig = {
   name: "Sushank Gurung",
   email: "sushankgurung2002@gmail.com",
+  /** Nepal mobile number, as dialed locally. */
+  phone: "9841957899",
+  phoneE164: "+9779841957899",
+  whatsappUrl: "https://wa.me/9779841957899",
   description:
     "Kathmandu-based React and React Native developer. I build web and mobile products with React, React Native, Expo, and TypeScript.",
   keywords: [
@@ -60,6 +64,7 @@ export function siteJsonLd() {
         "@id": personUrl,
         name: siteConfig.name,
         email: siteConfig.email,
+        telephone: siteConfig.phoneE164,
         jobTitle: "React and React Native Developer",
         description: siteConfig.description,
         url,

@@ -46,8 +46,10 @@ const Footer = () => {
             React and React Native development from Kathmandu. I work directly
             with clients to ship products that last.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href={siteConfig.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex w-fit items-center gap-1 font-mono text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             Let&apos;s talk
@@ -56,7 +58,7 @@ const Footer = () => {
               size={14}
               className="transition-transform group-hover:translate-x-px group-hover:-translate-y-px"
             />
-          </Link>
+          </a>
         </div>
 
         <div className="flex flex-col gap-8 sm:flex-row sm:gap-14">
