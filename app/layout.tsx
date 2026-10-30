@@ -1,4 +1,10 @@
-import { Geist, JetBrains_Mono, DM_Sans, Comic_Neue, Kosugi_Maru } from "next/font/google"
+import {
+  Geist,
+  JetBrains_Mono,
+  DM_Sans,
+  Comic_Neue,
+  Kosugi_Maru,
+} from "next/font/google"
 import type { Metadata } from "next"
 
 import JsonLd from "@/components/seo/JsonLd"

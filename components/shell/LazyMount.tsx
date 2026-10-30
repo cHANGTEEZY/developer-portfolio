@@ -1,11 +1,6 @@
 "use client"
 
-import {
-  useEffect,
-  useRef,
-  useState,
-  type ReactNode,
-} from "react"
+import { useEffect, useRef, useState, type ReactNode } from "react"
 
 import { cn } from "@/lib/utils"
 
@@ -47,6 +42,8 @@ export function LazyMount({
     }
 
     if (typeof IntersectionObserver === "undefined") {
+      // First client render must match the server fallback, then reveal content.
+      // oxlint-disable-next-line react/set-state-in-effect
       setVisible(true)
       return
     }

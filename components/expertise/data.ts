@@ -1,2 +1,21 @@
-
-export const EXPERTISE = ["React Native", "Expo", "Native Modules", "Brownfield Integrations", "TypeScript", "Objective-C", "Swift", "Java", "Kotlin", "EAS", "AWS", "In-App Purchases", "Apple Wallet", "Google Wallet", "AR", "Web3", "Subscriptions", "Custom SDK's", "Local First"]
+export const EXPERTISE = [
+  "React Native",
+  "Expo",
+  "Native Modules",
+  "Brownfield Integrations",
+  "TypeScript",
+  "Objective-C",
+  "Swift",
+  "Java",
+  "Kotlin",
+  "EAS",
+  "AWS",
+  "In-App Purchases",
+  "Apple Wallet",
+  "Google Wallet",
+  "AR",
+  "Web3",
+  "Subscriptions",
+  "Custom SDK's",
+  "Local First",
+]

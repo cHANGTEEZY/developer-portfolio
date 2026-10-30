@@ -54,7 +54,11 @@ export default function HomePage() {
             <Expertise />
           </div>
         </LayoutWrapper>
-        <LayoutWrapper maxWidth="full" padding="tight" className="mt-16 sm:mt-20">
+        <LayoutWrapper
+          maxWidth="full"
+          padding="tight"
+          className="mt-16 sm:mt-20"
+        >
           <Testimonials />
         </LayoutWrapper>
       </main>
