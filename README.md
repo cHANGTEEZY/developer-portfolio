@@ -1,76 +1,56 @@
-<p align="center">
-  <a href="https://vbee.studio" title="VBEE Studio">
-    <picture>
-      <source
-        media="(prefers-color-scheme: dark)"
-        srcset="public/VBee_white.png"
-      />
-      <img
-        src="public/VBEE_dark.png"
-        alt="VBEE Studio"
-        width="280"
-      />
-    </picture>
-  </a>
-</p>
-
-<h1 align="center">VBEE Studio</h1>
+<h1 align="center">Sushank Gurung</h1>
 
 <p align="center">
-  <strong>React &amp; React Native engineering studio</strong><br />
-  <sub>Kathmandu · partnering with teams worldwide</sub>
+  <strong>React &amp; React Native developer</strong><br />
+  <sub>Kathmandu · working with clients worldwide</sub>
 </p>
 
 <p align="center">
-  <a href="https://vbee.studio"><img src="https://img.shields.io/badge/website-vbee.studio-c94b5c?style=for-the-badge&labelColor=18181b" alt="Website" /></a>
-  <a href="mailto:sales@vbee.studio"><img src="https://img.shields.io/badge/email-sales%40vbee.studio-27272a?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="mailto:sushankgurung2002@gmail.com"><img src="https://img.shields.io/badge/email-sushankgurung2002%40gmail.com-27272a?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
 ---
 
-VBEE Studio is a **Kathmandu-based** React and React Native engineering studio. We partner with companies around the world to help them get the most out of **React**, **React Native**, and **Expo**—with a small team, direct communication, and clear ownership of what we ship.
+I'm a **Kathmandu-based** developer who builds web and mobile products with **React**, **React Native**, and **Expo**. You work with me directly, from the first call to the release.
 
-## Our story
+## Story
 
-It started alone, with a laptop and a deadline: freelance work, late nights, shipping for clients. The work was good, but the best products are not built by one person. Nepal has deep talent—the idea was to bring the right people together, hold a high bar, and build products that stand up anywhere.
+It started with a laptop and a deadline. My first projects were freelance jobs, built late at night in Kathmandu, figuring things out one bug at a time.
 
-**VBEE was founded in Kathmandu in 2024.** Today we are a team of **five**: small, focused, and hands-on with every engagement. We write solid code, talk openly with clients, own outcomes end to end, and aim to do better on each project than the last.
+Over 3 years later, that habit hasn't changed. I've worked with software companies in Lalitpur and with clients in Nepal and Australia: offline field apps, community apps on Google Play and the App Store, and dashboards teams use every day.
 
-**Kathmandu is where we are. Everywhere else is where we deliver.**
+I work mainly with React, React Native, and Expo, with TypeScript and Node.js behind them. I work alone on purpose. When you hire me, you talk to the person writing your code.
 
-## What we do
+**Kathmandu is where I work. Everywhere else is where I deliver.**
 
-### Product — build web and mobile products that last
+## What I do
+
+### Product — web and mobile products that last
 
 - React, React Native, and Expo from day one
 - Hands-on delivery from idea to release
-- A focused team that ships clearly and quickly
+- One person who ships clearly and stays through launch
 
-We stay involved from discovery through launch: reliable communication, web and mobile builds, and strong ownership of code quality and shipped outcomes.
-
-### Consulting — improve existing apps with focused support
+### Consulting — support for an app that's already live
 
 - React Native and Expo upgrades without needless disruption
 - Performance tuning and codebase stabilization
-- Features for brownfield products
-- Ongoing engineering support for your internal team
-
-We plug in where you need us—practical, transparent, and accountable through implementation.
+- Features for existing products
+- Engineering support for your team
 
 ## Expertise
 
-We align with how the world’s top brands use React Native—including names like the **NFL**, **Pizza Hut**, and **Microsoft**. We built on React Native and its ecosystem from day one and continue as an active partner in that community—**full-stack** work and **custom** solutions when you need something tailored.
+I build with the same React Native ecosystem used by teams at companies like the **NFL**, **Pizza Hut**, and **Microsoft**. The work is full-stack when the product needs it, and custom when a standard path doesn't fit.
 
 ## Track record
 
-**3 years · 35+ projects** across web and mobile for clients worldwide.
+**3+ years** of web and mobile work for clients in Nepal, Australia, and further afield.
 
 ## Connect
 
-|        |                                                        |
-| ------ | ------------------------------------------------------ |
-| Web    | [vbee.studio](https://vbee.studio)                     |
-| Email  | [sales@vbee.studio](mailto:sales@vbee.studio)          |
-| GitHub | [github.com/cHANGTEEZY](https://github.com/cHANGTEEZY) |
+|        |                                                                   |
+| ------ | ----------------------------------------------------------------- |
+| Email  | [sushankgurung2002@gmail.com](mailto:sushankgurung2002@gmail.com) |
+| GitHub | [github.com/cHANGTEEZY](https://github.com/cHANGTEEZY)            |
 
-<p align="center"><sub>© VBEE Studio — React &amp; React Native engineering from Kathmandu.</sub></p>
+<p align="center"><sub>© Sushank Gurung — React &amp; React Native development from Kathmandu.</sub></p>

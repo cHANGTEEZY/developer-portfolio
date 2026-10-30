@@ -1,13 +1,15 @@
 import { Resend } from "resend"
 
 import { buildContactEmailHtml, buildContactEmailText } from "@/lib/email"
+import { siteConfig } from "@/lib/site"
 
 const resendApiKey = process.env.RESEND_API_KEY
 const resend = resendApiKey ? new Resend(resendApiKey) : null
 
-const from = process.env.RESEND_FROM ?? "VBEE Studio <onboarding@resend.dev>"
+const from =
+  process.env.RESEND_FROM ?? `${siteConfig.name} <onboarding@resend.dev>`
 
-const inboxTo = process.env.RESEND_TO ?? "vbee-studio@sushankgurung.com"
+const inboxTo = process.env.RESEND_TO ?? siteConfig.email
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 

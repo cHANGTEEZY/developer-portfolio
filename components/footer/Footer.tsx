@@ -1,5 +1,8 @@
 import Link from "next/link"
 
+import { IsoCube } from "@/components/overflow/icons"
+import { siteConfig } from "@/lib/site"
+
 import {
   ArrowUpRight01Icon,
   Github01Icon,
@@ -11,7 +14,7 @@ import { HugeiconsIcon } from "@hugeicons/react"
 const social = [
   {
     href: "https://github.com/cHANGTEEZY",
-    label: "VBEE Studio on GitHub",
+    label: "Sushank Gurung on GitHub",
     icon: Github01Icon,
   },
   {
@@ -33,12 +36,13 @@ const Footer = () => {
     <footer className="border-t border-muted px-5 py-10 md:px-2 md:pt-12 md:pb-12">
       <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between md:gap-12">
         <div className="max-w-sm space-y-3">
-          <p className="font-maru text-2xl font-bold tracking-tight text-foreground">
-            VBEE Studio
+          <p className="font-maru flex items-center gap-2 text-2xl font-bold tracking-tight text-foreground">
+            <IsoCube className="h-9 w-9" decorative />
+            Sushank Gurung
           </p>
           <p className="font-mono text-xs leading-relaxed text-muted-foreground">
-            React &amp; React Native engineering from Kathmandu. We partner with
-            teams worldwide to ship products that last.
+            React and React Native development from Kathmandu. I work directly
+            with clients to ship products that last.
           </p>
           <Link
             href="/contact"
@@ -59,10 +63,10 @@ const Footer = () => {
               Connect
             </p>
             <a
-              href="mailto:vbee-studio@sushankgurung.com"
+              href={`mailto:${siteConfig.email}`}
               className="block font-mono text-sm text-foreground/90 underline decoration-border underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
             >
-              vbee-studio@sushankgurung.com
+              {siteConfig.email}
             </a>
           </div>
 
@@ -91,7 +95,7 @@ const Footer = () => {
 
       <div className="mt-10 flex flex-col gap-3 border-t border-muted pt-8 md:flex-row md:items-center md:justify-between md:gap-4">
         <p className="font-mono text-xs text-muted-foreground">
-          © {year} VBEE Studio. All rights reserved.
+          © {year} Sushank Gurung. All rights reserved.
         </p>
         <p className="font-mono text-xs text-muted-foreground">
           Kathmandu, Nepal · UTC+5:45
