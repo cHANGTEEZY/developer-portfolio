@@ -10,6 +10,8 @@ import { TerminalPromptLine } from "@/components/terminal/TerminalPromptLine"
 import { TerminalSuccessLine } from "@/components/terminal/TerminalSuccessLine"
 import { TerminalWindow } from "@/components/terminal/TerminalWindow"
 import { Button as UiButton } from "@/components/ui/button"
+import { IsoMail } from "@/components/overflow/icons"
+import { siteConfig } from "@/lib/site"
 
 type FormState = "idle" | "submitting" | "success" | "error"
 
@@ -82,7 +84,7 @@ const Contact = () => {
               200: Transmission Complete
             </h1>
             <p className="mt-4 max-w-md text-base leading-relaxed text-[#A0A0A0] sm:text-lg">
-              Thanks — your message is on its way. We&apos;ll reply soon.
+              Thanks — your message is on its way. I&apos;ll reply soon.
             </p>
 
             <div className="mt-10 w-full max-w-lg">
@@ -107,6 +109,7 @@ const Contact = () => {
           </div>
         ) : (
           <>
+            <IsoMail className="mb-4 h-16 w-16" />
             <span className="font-mono text-xs text-muted-foreground">
               Contact
             </span>
@@ -114,8 +117,8 @@ const Contact = () => {
               Let&apos;s build something great together.
             </h1>
             <p className="mt-3 max-w-[60ch] font-sans text-sm leading-relaxed text-muted-foreground">
-              Tell us a bit about your product, your team, and what kind of
-              support you need. We&apos;ll get back with a clear next step.
+              Tell me a bit about your product and what kind of help you need.
+              I&apos;ll get back with a clear next step.
             </p>
 
             <form className="mt-6 flex flex-col gap-5" onSubmit={handleSubmit}>
@@ -148,7 +151,7 @@ const Contact = () => {
                   type="email"
                   required
                   autoComplete="email"
-                  placeholder="vbee-studio@sushankgurung.com"
+                  placeholder={siteConfig.email}
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -166,7 +169,7 @@ const Contact = () => {
                   rows={8}
                   required
                   minLength={10}
-                  placeholder="Tell us briefly about your project, your team, and what kind of help is needed."
+                  placeholder="Tell me briefly about your project and what kind of help you need."
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })

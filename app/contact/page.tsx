@@ -8,15 +8,15 @@ import { siteConfig } from "@/lib/site"
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Get in touch with ${siteConfig.name}. Book a discovery call or ask about React, React Native, and Expo projects.`,
+  description: `Get in touch with ${siteConfig.name}. Ask about a React, React Native, or Expo project.`,
   openGraph: {
     title: `Contact — ${siteConfig.name}`,
-    description: `Get in touch with ${siteConfig.name} for React and React Native engineering.`,
+    description: `Get in touch with ${siteConfig.name} for React and React Native development.`,
     url: "/contact",
   },
   twitter: {
     title: `Contact — ${siteConfig.name}`,
-    description: `Get in touch with ${siteConfig.name} for React and React Native engineering.`,
+    description: `Get in touch with ${siteConfig.name} for React and React Native development.`,
   },
 }
 

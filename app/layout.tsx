@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: siteConfig.name,
   title: {
-    default: `${siteConfig.name} — React & React Native engineering`,
+    default: `${siteConfig.name} — React & React Native developer`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -31,18 +31,18 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — React & React Native engineering`,
+    title: `${siteConfig.name} — React & React Native developer`,
     description: siteConfig.description,
     images: [
       {
         url: siteConfig.defaultOgImage,
-        alt: `${siteConfig.name} — React and React Native engineering`,
+        alt: `${siteConfig.name} — React and React Native developer`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — React & React Native engineering`,
+    title: `${siteConfig.name} — React & React Native developer`,
     description: siteConfig.description,
     creator: siteConfig.twitterHandle,
     images: [siteConfig.defaultOgImage],

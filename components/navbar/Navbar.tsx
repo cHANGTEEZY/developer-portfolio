@@ -2,10 +2,9 @@
 
 import { ArrowLeft01Icon, ArrowUpRight01Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
-import Image from "next/image"
 import Link from "next/link"
 
-const logoClass = "size-[60px] object-contain"
+import { IsoCube } from "@/components/overflow/icons"
 
 type NavbarProps = {
   variant?: "default" | "contact"
@@ -16,29 +15,16 @@ const Navbar = ({ variant = "default" }: NavbarProps) => {
     <nav className="flex items-center justify-between px-6 py-2 sm:px-0">
       <Link
         href="/"
-        className="relative inline-block size-[60px] shrink-0 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none"
-        aria-label="VBEE Studio — Home"
+        className="font-maru inline-flex items-center gap-2 text-lg font-bold tracking-tight text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none"
+        aria-label="Sushank Gurung — Home"
       >
-        <Image
-          src="/VBEE_dark.png"
-          alt=""
-          width={60}
-          height={60}
-          className={`${logoClass} dark:hidden`}
-        />
-        <Image
-          src="/VBee_white.png"
-          alt=""
-          width={60}
-          height={60}
-          aria-hidden
-          className={`${logoClass} hidden dark:block`}
-        />
+        <IsoCube className="h-8 w-8" decorative />
+        Sushank Gurung
       </Link>
       <div>
         {variant === "contact" ? (
           <>
-            <h2 className="text-sm">Contact VBEE</h2>
+            <h2 className="text-sm">Contact</h2>
             <p>
               <Link
                 href="/"
@@ -55,7 +41,7 @@ const Navbar = ({ variant = "default" }: NavbarProps) => {
           </>
         ) : (
           <>
-            <h2 className="text-sm">Need a Development Partner?</h2>
+            <h2 className="text-sm">Available for freelance</h2>
             <p>
               <Link
                 href="/contact"

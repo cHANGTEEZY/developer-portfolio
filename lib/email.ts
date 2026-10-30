@@ -1,3 +1,5 @@
+import { getSiteUrl, siteConfig } from "@/lib/site"
+
 /** Escape user-controlled strings for safe inclusion in HTML email bodies. */
 export function escapeHtml(s: string): string {
   return s
@@ -17,6 +19,8 @@ export function buildContactEmailHtml(params: {
   const safeName = escapeHtml(name)
   const safeEmail = escapeHtml(email)
   const safeMessage = escapeHtml(message).replace(/\n/g, "<br/>")
+  const siteUrl = getSiteUrl()
+  const siteLabel = siteUrl.replace(/^https?:\/\//, "")
   const initials = escapeHtml(
     name
       .trim()
@@ -41,7 +45,7 @@ export function buildContactEmailHtml(params: {
           <!-- Header -->
           <tr>
             <td style="padding-bottom:28px;">
-              <p style="margin:0;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:0.08em;color:#555;text-transform:uppercase;">VBEE Studio</p>
+              <p style="margin:0;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:0.08em;color:#555;text-transform:uppercase;">${escapeHtml(siteConfig.name)}</p>
             </td>
           </tr>
 
@@ -89,7 +93,7 @@ export function buildContactEmailHtml(params: {
           <!-- Footer -->
           <tr>
             <td style="padding-top:24px;">
-              <p style="margin:0;font-size:12px;color:#3a3a3a;text-align:center;">Submitted via <a href="https://vbee.studio" style="color:#555;text-decoration:none;">vbee.studio</a> contact form</p>
+              <p style="margin:0;font-size:12px;color:#3a3a3a;text-align:center;">Submitted via <a href="${escapeHtml(siteUrl)}" style="color:#555;text-decoration:none;">${escapeHtml(siteLabel)}</a> contact form</p>
             </td>
           </tr>
 
@@ -106,7 +110,8 @@ export function buildContactEmailText(params: {
   email: string
   message: string
 }): string {
-  return `New inquiry — VBEE Studio
+  const siteUrl = getSiteUrl()
+  return `New inquiry — ${siteConfig.name}
 
 From:    ${params.name}
 Email:   ${params.email}
@@ -116,5 +121,5 @@ ${params.message}
 
 ---
 Reply directly to this email to respond to ${params.name}.
-Submitted via vbee.studio`
+Submitted via ${siteUrl}`
 }

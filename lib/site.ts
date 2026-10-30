@@ -12,15 +12,15 @@ export function getSiteUrl(): string {
 }
 
 export const siteConfig = {
-  name: "VBEE Studio",
+  name: "Sushank Gurung",
+  email: "sushankgurung2002@gmail.com",
   description:
-    "Kathmandu-based React and React Native engineering studio. We partner with teams worldwide to ship durable products with React, React Native, and Expo.",
+    "Kathmandu-based React and React Native developer. I build web and mobile products with React, React Native, Expo, and TypeScript.",
   keywords: [
     "React developer",
     "React Native",
     "Expo",
     "Kathmandu",
-    "VBEE Studio",
     "Sushank Gurung",
     "web development",
     "mobile app development",
@@ -38,17 +38,17 @@ export const siteConfig = {
     "https://www.linkedin.com/in/sushank-gurung/",
     "https://x.com/SushankGurung",
   ],
-  /** Open Graph / Twitter card + Organization schema image (public path). */
+  /** Open Graph / Twitter card image (public path). */
   defaultOgImage: "/og-default.png",
 } as const
 
-const ORG_ID = "#organization"
+const PERSON_ID = "#person"
 const WEBSITE_ID = "#website"
 
-/** Organization + WebSite JSON-LD for brand/site name signals (e.g. Google). */
+/** Person + WebSite JSON-LD for name signals (e.g. Google). */
 export function siteJsonLd() {
   const url = getSiteUrl()
-  const orgUrl = `${url}${ORG_ID}`
+  const personUrl = `${url}${PERSON_ID}`
   const websiteUrl = `${url}${WEBSITE_ID}`
   const imageUrl = `${url}${siteConfig.defaultOgImage}`
 
@@ -56,9 +56,11 @@ export function siteJsonLd() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "@id": orgUrl,
+        "@type": "Person",
+        "@id": personUrl,
         name: siteConfig.name,
+        email: siteConfig.email,
+        jobTitle: "React and React Native Developer",
         description: siteConfig.description,
         url,
         image: imageUrl,
@@ -74,8 +76,7 @@ export function siteJsonLd() {
         "@id": websiteUrl,
         url,
         name: siteConfig.name,
-        alternateName: ["VBEE"],
-        publisher: { "@id": orgUrl },
+        publisher: { "@id": personUrl },
       },
     ],
   }

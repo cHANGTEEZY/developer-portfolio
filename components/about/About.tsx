@@ -9,24 +9,25 @@ import Tooltip, {
   TooltipContent,
   TooltipTrigger,
 } from "../composition/Tooltip/Tooltip"
-import Image from "next/image"
+
+import { IsoCode } from "@/components/overflow/icons"
+import { siteConfig } from "@/lib/site"
 
 const About = () => {
   const router = useRouter()
 
   return (
     <div className="flex flex-col items-center justify-center gap-[34px]">
-      <Image src={"/react10.png"} alt="React logo" width={100} height={100} />
+      <IsoCode className="h-24 w-24" />
 
       <header className="max-w-2xl space-y-8">
         <h2 className="text-center font-sans text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-          React & React Native <br /> Engineering Studio
+          React & React Native <br /> Developer
         </h2>
 
         <p className="max-w-[500px] px-6 text-center font-mono text-sm leading-relaxed text-muted-foreground sm:px-0">
-          VBEE Studio is a Kathmandu-based React & React Native engineering
-          studio. We partner with the world&apos;s top companies to help them
-          unlock the full potential of React, React Native and Expo.
+          I&apos;m Sushank Gurung, a developer based in Kathmandu. I build web
+          and mobile products with React, React Native, and Expo.
         </p>
       </header>
 
@@ -48,12 +49,10 @@ const About = () => {
         <Tooltip>
           <TooltipTrigger mode="click" decay="immediate">
             <button
-              onClick={() =>
-                navigator.clipboard.writeText("vbee-studio@sushankgurung.com")
-              }
+              onClick={() => navigator.clipboard.writeText(siteConfig.email)}
               className="cursor-pointer text-sm italic"
             >
-              vbee-studio@sushankgurung.com
+              {siteConfig.email}
             </button>
           </TooltipTrigger>
           <TooltipContent variant="default" size="sm" position="bottom">

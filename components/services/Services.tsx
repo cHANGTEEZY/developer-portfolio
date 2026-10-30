@@ -14,6 +14,8 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useEffect, useMemo, useState, type ReactNode } from "react"
 
+import { IsoPhone, IsoShield } from "@/components/overflow/icons"
+
 import { TechStackLogos } from "./TechStackLogos"
 
 type ServiceCardData = {
@@ -40,11 +42,11 @@ const SERVICE_CARDS: ServiceCardData[] = [
     whatItIs: [
       "React, React Native, and Expo from day one.",
       "Hands-on delivery from idea to release.",
-      "A focused team that ships clearly and quickly.",
+      "One developer who ships clearly and quickly.",
     ],
     whyUs: [
-      "Built by a Kathmandu team that owns every detail.",
-      "Small team, high standards, direct communication.",
+      "Built in Kathmandu. I own every detail.",
+      "Direct communication and a high bar for the work.",
     ],
   },
   {
@@ -58,8 +60,8 @@ const SERVICE_CARDS: ServiceCardData[] = [
       "Ongoing engineering support for your internal team.",
     ],
     whyUs: [
-      "We stay practical, transparent, and accountable.",
-      "We keep improving each project over the last one.",
+      "I stay practical, transparent, and accountable.",
+      "I keep improving each project over the last one.",
     ],
   },
 ]
@@ -69,11 +71,11 @@ const SERVICE_MODALS: ServiceModalData[] = [
     tag: "Product",
     title: "From first idea to production release",
     description:
-      "We started as freelancers and built VBEE in Kathmandu in 2024 to create better products as a team. Today we help companies launch web and mobile apps using React, React Native, and Expo with a clear, hands-on process.",
+      "I started with freelance work in Kathmandu and have spent 3+ years shipping web and mobile apps with React, React Native, and Expo. You work with me from the first call through release.",
     bullets: [
       {
         icon: <Users className="h-4 w-4" />,
-        text: "Dedicated team involvement from discovery to launch.",
+        text: "I stay involved from discovery to launch.",
       },
       {
         icon: <Clock className="h-4 w-4" />,
@@ -85,7 +87,7 @@ const SERVICE_MODALS: ServiceModalData[] = [
       },
       {
         icon: <MessageSquare className="h-4 w-4" />,
-        text: "Open collaboration with direct access to the builders.",
+        text: "You talk directly to the person writing the code.",
       },
       {
         icon: <Smartphone className="h-4 w-4" />,
@@ -98,7 +100,7 @@ const SERVICE_MODALS: ServiceModalData[] = [
     tag: "Consulting",
     title: "Expert support for scaling products",
     description:
-      "If your app is already live, we plug in where you need us most. From upgrades and performance work to feature expansion, we help teams move forward with confidence while keeping product quality high.",
+      "If your app is already live, I plug in where you need me most. From upgrades and performance work to new features, I help you move forward while keeping product quality high.",
     bullets: [
       {
         icon: <User className="h-4 w-4" />,
@@ -110,7 +112,7 @@ const SERVICE_MODALS: ServiceModalData[] = [
       },
       {
         icon: <MessageSquare className="h-4 w-4" />,
-        text: "Clear communication with the engineers doing the work.",
+        text: "Clear communication with the person doing the work.",
       },
       {
         icon: <Activity className="h-4 w-4" />,
@@ -211,6 +213,11 @@ function ServiceCard({
       onClick={onOpen}
     >
       <div className="flex flex-col gap-3 md:min-h-34">
+        {tag === "Product" ? (
+          <IsoPhone className="h-14 w-14" />
+        ) : (
+          <IsoShield className="h-14 w-14" />
+        )}
         <span className="hidden w-fit rounded-full bg-sky-100 px-3 py-1 font-sans text-xs font-medium text-sky-800 md:inline-flex dark:bg-[#ddfe7a]/60 dark:text-[#ccf959]">
           {tag}
         </span>
@@ -233,7 +240,7 @@ function ServiceCard({
 
       <div className="mt-6 hidden border-t border-foreground/20 pt-6 md:block dark:border-border/80">
         <p className="font-mono text-xs font-medium tracking-wide text-muted-foreground uppercase">
-          Why us
+          Why me
         </p>
         <ul className="mt-3 space-y-2 font-sans text-sm leading-relaxed text-muted-foreground">
           {whyUs.map((line, i) => (
@@ -283,7 +290,7 @@ const Services = () => {
           </h2>
           <h2 className="font-sans text-2xl font-semibold text-muted-foreground">
             Whether you are launching from scratch or improving an existing app,
-            our team of five builds with React, React Native, and Expo.
+            I build with React, React Native, and Expo.
           </h2>
         </div>
 
@@ -300,27 +307,6 @@ const Services = () => {
 
           <div className="flex flex-col items-center justify-center gap-4 rounded-[2rem] bg-[#e6e6e6] p-8 dark:bg-muted/45">
             <div className="flex items-center justify-center gap-3">
-              <div className="relative h-10 w-auto">
-                <Image
-                  src="/VBEE_dark.png"
-                  alt="VBEE"
-                  width={54}
-                  height={40}
-                  className="block h-10 w-auto dark:hidden"
-                  priority={false}
-                />
-                <Image
-                  src="/VBee_white.png"
-                  alt="VBEE"
-                  width={54}
-                  height={40}
-                  className="hidden h-10 w-auto dark:block"
-                  priority={false}
-                />
-              </div>
-
-              <span className="font-mono text-xs text-muted-foreground">X</span>
-
               <div className="relative h-10 w-auto">
                 <Image
                   src="/aiStatementLight.webp"
@@ -340,11 +326,11 @@ const Services = () => {
                 />
               </div>
             </div>
-            <span className="font-mono text-xs">OUR STANCE ON AI</span>
+            <span className="font-mono text-xs">MY STANCE ON AI</span>
             <p className="px-4 text-center font-sans text-sm leading-relaxed">
-              We use AI as a supporting tool, not a replacement for engineering
-              judgment. We still write with care, review thoroughly, and take
-              full ownership of every line we ship to clients.
+              I use AI as a supporting tool, not a replacement for engineering
+              judgment. I still write with care, review thoroughly, and take
+              full ownership of every line I ship.
             </p>
           </div>
         </div>

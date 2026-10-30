@@ -17,9 +17,9 @@ const Expertise = () => {
       <div className="flex flex-col items-center justify-center space-y-10">
         <p className="flex max-w-[500px] px-6 text-center font-sans text-sm leading-relaxed sm:px-0">
           The world’s top brands — including the National Football League, Pizza
-          Hut and Microsoft — use React Native for app development, and so do
-          we. We started building with React Native and its ecosystem on day
-          one, and we’ve been a trusted partner in the community ever since.
+          Hut and Microsoft — use React Native for app development, and so do I.
+          I started building with React Native and its ecosystem on day one, and
+          I&apos;ve stayed close to that community ever since.
         </p>
 
         <span className="font-mono text-xs text-muted-foreground">
