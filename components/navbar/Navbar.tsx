@@ -1,11 +1,10 @@
-"use client"
+"use client";
 
-import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons"
-import { HugeiconsIcon } from "@hugeicons/react"
-import Link from "next/link"
+import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import Link from "next/link";
 
-import { IsoCube } from "@/components/overflow/icons"
-import { siteConfig } from "@/lib/site"
+import { siteConfig } from "@/lib/site";
 
 const Navbar = () => {
   return (
@@ -15,7 +14,6 @@ const Navbar = () => {
         className="font-maru inline-flex items-center gap-2 text-lg font-bold tracking-tight text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none"
         aria-label="Sushank Gurung — Home"
       >
-        <IsoCube className="h-8 w-8" decorative />
         Sushank Gurung
       </Link>
       <div>
@@ -33,7 +31,7 @@ const Navbar = () => {
         </p>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

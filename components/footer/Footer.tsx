@@ -1,15 +1,15 @@
-import Link from "next/link"
+import Link from "next/link";
 
-import { IsoCube } from "@/components/overflow/icons"
-import { siteConfig } from "@/lib/site"
+import { IsoCube } from "@/components/overflow/icons";
+import { siteConfig } from "@/lib/site";
 
 import {
   ArrowUpRight01Icon,
   Github01Icon,
   Linkedin01Icon,
   NewTwitterEllipseIcon,
-} from "@hugeicons/core-free-icons"
-import { HugeiconsIcon } from "@hugeicons/react"
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 
 const social = [
   {
@@ -27,12 +27,12 @@ const social = [
     label: "Sushank Gurung on X",
     icon: NewTwitterEllipseIcon,
   },
-] as const
+] as const;
 
 const Footer = () => {
   // Module scope runs before the Worker has a clock, so Date there is 1970.
   // eslint-disable-next-line react/purity -- must run during the request
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-muted px-5 py-10 md:px-2 md:pt-12 md:pb-12">
@@ -106,7 +106,7 @@ const Footer = () => {
         </p>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

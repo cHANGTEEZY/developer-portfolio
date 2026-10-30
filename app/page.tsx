@@ -1,13 +1,13 @@
-import About from "@/components/about/About"
-import Navbar from "@/components/navbar/Navbar"
-import { LayoutWrapper } from "@/components/shell"
-import Hero from "@/components/hero/Hero"
-import Expertise from "@/components/expertise/Expertise"
-import Footer from "@/components/footer/Footer"
-import Work from "@/components/work/Work"
-import Services from "@/components/services/Services"
-import DarkModeToggle from "@/components/DarkModeToggle"
-import Process from "@/components/process/Process"
+import About from "@/components/about/About";
+import Navbar from "@/components/navbar/Navbar";
+import { LayoutWrapper } from "@/components/shell";
+import Hero from "@/components/hero/Hero";
+import Expertise from "@/components/expertise/Expertise";
+import Footer from "@/components/footer/Footer";
+import Work from "@/components/work/Work";
+import Services from "@/components/services/Services";
+import DarkModeToggle from "@/components/DarkModeToggle";
+import Process from "@/components/process/Process";
 
 export default function HomePage() {
   return (
@@ -57,13 +57,13 @@ export default function HomePage() {
       <LayoutWrapper maxWidth="full" padding="tight" className="bg-muted/30">
         <div className="rounded-3xl">
           <Work />
-          <LayoutWrapper maxWidth="sm" padding="none">
+          {/* <LayoutWrapper maxWidth="sm" padding="none">
             <Footer />
-          </LayoutWrapper>
+          </LayoutWrapper> */}
         </div>
       </LayoutWrapper>
 
       <DarkModeToggle />
     </>
-  )
+  );
 }
