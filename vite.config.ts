@@ -1,5 +1,7 @@
 // vp migrate: merged .oxlintrc.json (66437bfc4a433d1e1aa740335790228f).
 import { defineConfig } from "vite-plus"
+import vinext from "vinext";
+import { cloudflare } from "@cloudflare/vite-plugin";
 
 export default defineConfig({
   test: {
@@ -1271,4 +1273,14 @@ export default defineConfig({
       ".pnpm-store/",
     ],
   },
+
+  plugins: [
+    vinext(),
+    cloudflare({
+      viteEnvironment: {
+        name: "rsc",
+        childEnvironments: ["ssr"],
+      },
+    }),
+  ],
 })

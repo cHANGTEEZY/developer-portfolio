@@ -29,9 +29,11 @@ const social = [
   },
 ] as const
 
-const year = new Date().getFullYear()
-
 const Footer = () => {
+  // Module scope runs before the Worker has a clock, so Date there is 1970.
+  // eslint-disable-next-line react/purity -- must run during the request
+  const year = new Date().getFullYear()
+
   return (
     <footer className="border-t border-muted px-5 py-10 md:px-2 md:pt-12 md:pb-12">
       <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between md:gap-12">
@@ -44,8 +46,10 @@ const Footer = () => {
             React and React Native development from Kathmandu. I work directly
             with clients to ship products that last.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href={siteConfig.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex w-fit items-center gap-1 font-mono text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             Let&apos;s talk
@@ -54,7 +58,7 @@ const Footer = () => {
               size={14}
               className="transition-transform group-hover:translate-x-px group-hover:-translate-y-px"
             />
-          </Link>
+          </a>
         </div>
 
         <div className="flex flex-col gap-8 sm:flex-row sm:gap-14">

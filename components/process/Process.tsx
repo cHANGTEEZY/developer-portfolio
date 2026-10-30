@@ -1,18 +1,16 @@
-import type { ReactNode } from "react"
+import type { ComponentType } from "react"
+import type { HairlineProps } from "@lucasmarkes/hairline/react"
 
-import {
-  IsoBrowser,
-  IsoChat,
-  IsoCode,
-  IsoDeploy,
-} from "@/components/overflow/icons"
+import { HairlinePiece } from "@/components/hairline/HairlinePiece"
+import { Exploded, Format, Loupe, Slow } from "@/components/ui/hairline"
 import { Timeline, type TimelineEntry } from "@/components/ui/timeline"
 
 type StepDef = {
   code: string
   title: string
   description: string
-  icon: ReactNode
+  figure: ComponentType<HairlineProps>
+  figureLabel: string
 }
 
 const STEPS: StepDef[] = [
@@ -21,28 +19,35 @@ const STEPS: StepDef[] = [
     title: "Discovery",
     description:
       "Goals, constraints, and who actually uses the thing — nailed down before I type `npm install`. Less guessing later.",
-    icon: <IsoChat className="h-14 w-14" />,
+    figure: Loupe,
+    figureLabel: "A loupe over a blank ruled sheet. The pointer drags it across the page.",
   },
   {
     code: "02",
     title: "Design",
     description:
       "Structure and screens that can grow with you. Good architecture beats a pretty mess that cracks under the first real feature.",
-    icon: <IsoBrowser className="h-14 w-14" />,
+    figure: Exploded,
+    figureLabel:
+      "An app window in layers. Moving across opens the gap; moving down picks a layer.",
   },
   {
     code: "03",
     title: "Build",
     description:
       "React, React Native, Expo — the stack I live in. Reviews, tests where they matter, and I don't ship work I won't stand behind.",
-    icon: <IsoCode className="h-14 w-14" />,
+    figure: Format,
+    figureLabel:
+      "A file of crooked lines. The pointer runs the formatter down it until the lines sit square.",
   },
   {
     code: "04",
     title: "Ship",
     description:
       "Release, handoff docs, and space to stabilize. If something breaks in prod, I'm in the thread — not ghosting.",
-    icon: <IsoDeploy className="h-14 w-14" />,
+    figure: Slow,
+    figureLabel:
+      "Crates riding a belt through a gate. Hovering slows the clock without stopping it.",
   },
 ]
 
@@ -54,7 +59,13 @@ const TIMELINE_DATA: TimelineEntry[] = STEPS.map((step, index) => {
     title: step.title,
     content: (
       <div className="space-y-5">
-        {step.icon}
+        <HairlinePiece
+          figure={step.figure}
+          label={step.figureLabel}
+          intensity={0.66}
+          align="start"
+          className="max-w-[200px]"
+        />
         <p className="font-mono text-xs leading-none text-muted-foreground">
           <span className="text-foreground">{step.code}</span>
           <span className="px-2 text-muted-foreground/50">—</span>

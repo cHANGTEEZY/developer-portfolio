@@ -11,10 +11,11 @@ import {
   X,
 } from "lucide-react"
 import Image from "next/image"
-import { useRouter } from "next/navigation"
 import { useEffect, useMemo, useState, type ReactNode } from "react"
 
-import { IsoPhone, IsoShield } from "@/components/overflow/icons"
+import { HairlinePiece } from "@/components/hairline/HairlinePiece"
+import { Phone, Rebuild } from "@/components/ui/hairline"
+import { siteConfig } from "@/lib/site"
 
 import { TechStackLogos } from "./TechStackLogos"
 
@@ -24,6 +25,8 @@ type ServiceCardData = {
   titleRest: string
   whatItIs: string[]
   whyUs: string[]
+  figure: typeof Phone
+  figureLabel: string
 }
 
 type ServiceModalData = {
@@ -48,6 +51,9 @@ const SERVICE_CARDS: ServiceCardData[] = [
       "Built in Kathmandu. I own every detail.",
       "Direct communication and a high bar for the work.",
     ],
+    figure: Phone,
+    figureLabel:
+      "A phone in layers: glass, board, battery, and shell. Moving across opens the gap.",
   },
   {
     tag: "Consulting",
@@ -63,6 +69,9 @@ const SERVICE_CARDS: ServiceCardData[] = [
       "I stay practical, transparent, and accountable.",
       "I keep improving each project over the last one.",
     ],
+    figure: Rebuild,
+    figureLabel:
+      "A tree of packages. The one under the pointer rises, and every package that depends on it follows.",
   },
 ]
 
@@ -130,8 +139,6 @@ function ServiceModal({
   modal: ServiceModalData
   onClose: () => void
 }) {
-  const router = useRouter()
-
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose()
@@ -183,16 +190,15 @@ function ServiceModal({
         </ul>
 
         <div className="mt-10">
-          <button
-            type="button"
-            onClick={() => {
-              onClose()
-              router.push("/contact")
-            }}
-            className="rounded-full bg-foreground px-6 py-3 font-sans text-sm font-medium text-background transition-colors hover:opacity-90"
+          <a
+            href={siteConfig.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
+            className="inline-flex rounded-full bg-foreground px-6 py-3 font-sans text-sm font-medium text-background transition-colors hover:opacity-90"
           >
             {modal.ctaLabel}
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -205,6 +211,8 @@ function ServiceCard({
   titleRest,
   whatItIs,
   whyUs,
+  figure,
+  figureLabel,
   onOpen,
 }: ServiceCardData & { onOpen: () => void }) {
   return (
@@ -213,11 +221,15 @@ function ServiceCard({
       onClick={onOpen}
     >
       <div className="flex flex-col gap-3 md:min-h-34">
-        {tag === "Product" ? (
-          <IsoPhone className="h-14 w-14" />
-        ) : (
-          <IsoShield className="h-14 w-14" />
-        )}
+        <HairlinePiece
+          figure={figure}
+          label={figureLabel}
+          intensity={tag === "Product" ? 0.7 : 0.68}
+          align="start"
+          frame
+          isolate
+          className="max-w-[210px]"
+        />
         <span className="hidden w-fit rounded-full bg-sky-100 px-3 py-1 font-sans text-xs font-medium text-sky-800 md:inline-flex dark:bg-[#ddfe7a]/60 dark:text-[#ccf959]">
           {tag}
         </span>
