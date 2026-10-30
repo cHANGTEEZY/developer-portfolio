@@ -1,16 +1,11 @@
 import { Resend } from "resend"
 
-import {
-  buildContactEmailHtml,
-  buildContactEmailText,
-} from "@/lib/email"
+import { buildContactEmailHtml, buildContactEmailText } from "@/lib/email"
 
 const resendApiKey = process.env.RESEND_API_KEY
 const resend = resendApiKey ? new Resend(resendApiKey) : null
 
-const from =
-  process.env.RESEND_FROM ?? "VBEE Studio <onboarding@resend.dev>"
-
+const from = process.env.RESEND_FROM ?? "VBEE Studio <onboarding@resend.dev>"
 
 const inboxTo = process.env.RESEND_TO ?? "vbee-studio@sushankgurung.com"
 

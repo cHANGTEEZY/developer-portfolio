@@ -14,7 +14,7 @@ export function RadarBackdrop({ className }: RadarBackdropProps) {
       aria-hidden
     >
       <svg
-        className="absolute left-1/2 top-1/2 h-[min(90vw,520px)] w-[min(90vw,520px)] -translate-x-1/2 -translate-y-1/2"
+        className="absolute top-1/2 left-1/2 h-[min(90vw,520px)] w-[min(90vw,520px)] -translate-x-1/2 -translate-y-1/2"
         viewBox="0 0 400 400"
         fill="none"
       >

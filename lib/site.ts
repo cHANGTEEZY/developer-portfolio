@@ -26,7 +26,12 @@ export const siteConfig = {
     "mobile app development",
   ],
   creator: "Sushank Gurung",
-  authors: [{ name: "Sushank Gurung", url: "https://www.linkedin.com/in/sushank-gurung/" }],
+  authors: [
+    {
+      name: "Sushank Gurung",
+      url: "https://www.linkedin.com/in/sushank-gurung/",
+    },
+  ],
   twitterHandle: "@SushankGurung",
   sameAs: [
     "https://github.com/cHANGTEEZY",

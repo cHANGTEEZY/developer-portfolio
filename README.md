@@ -42,18 +42,18 @@ It started alone, with a laptop and a deadline: freelance work, late nights, shi
 
 ### Product — build web and mobile products that last
 
-- React, React Native, and Expo from day one  
-- Hands-on delivery from idea to release  
-- A focused team that ships clearly and quickly  
+- React, React Native, and Expo from day one
+- Hands-on delivery from idea to release
+- A focused team that ships clearly and quickly
 
 We stay involved from discovery through launch: reliable communication, web and mobile builds, and strong ownership of code quality and shipped outcomes.
 
 ### Consulting — improve existing apps with focused support
 
-- React Native and Expo upgrades without needless disruption  
-- Performance tuning and codebase stabilization  
-- Features for brownfield products  
-- Ongoing engineering support for your internal team  
+- React Native and Expo upgrades without needless disruption
+- Performance tuning and codebase stabilization
+- Features for brownfield products
+- Ongoing engineering support for your internal team
 
 We plug in where you need us—practical, transparent, and accountable through implementation.
 
@@ -67,10 +67,10 @@ We align with how the world’s top brands use React Native—including names li
 
 ## Connect
 
-|        |                                                              |
-| ------ | ------------------------------------------------------------ |
-| Web    | [vbee.studio](https://vbee.studio)                           |
-| Email  | [sales@vbee.studio](mailto:sales@vbee.studio)               |
-| GitHub | [github.com/cHANGTEEZY](https://github.com/cHANGTEEZY)       |
+|        |                                                        |
+| ------ | ------------------------------------------------------ |
+| Web    | [vbee.studio](https://vbee.studio)                     |
+| Email  | [sales@vbee.studio](mailto:sales@vbee.studio)          |
+| GitHub | [github.com/cHANGTEEZY](https://github.com/cHANGTEEZY) |
 
 <p align="center"><sub>© VBEE Studio — React &amp; React Native engineering from Kathmandu.</sub></p>

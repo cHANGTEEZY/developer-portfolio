@@ -131,7 +131,9 @@ function HeroOrbit({ orbitAllowed }: { orbitAllowed: boolean }) {
   const { get, gl } = useThree()
   const orbitRef = useRef<OrbitControlsImpl>(null)
   const orbitAllowedRef = useRef(orbitAllowed)
-  orbitAllowedRef.current = orbitAllowed
+  useEffect(() => {
+    orbitAllowedRef.current = orbitAllowed
+  }, [orbitAllowed])
   const homePos = useRef(new THREE.Vector3())
   const homeFov = useRef(50)
   const returning = useRef(false)

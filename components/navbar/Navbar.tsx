@@ -1,9 +1,6 @@
 "use client"
 
-import {
-  ArrowLeft01Icon,
-  ArrowUpRight01Icon,
-} from "@hugeicons/core-free-icons"
+import { ArrowLeft01Icon, ArrowUpRight01Icon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
 import Image from "next/image"
 import Link from "next/link"
@@ -19,7 +16,7 @@ const Navbar = ({ variant = "default" }: NavbarProps) => {
     <nav className="flex items-center justify-between px-6 py-2 sm:px-0">
       <Link
         href="/"
-        className="relative inline-block size-[60px] shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        className="relative inline-block size-[60px] shrink-0 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none"
         aria-label="VBEE Studio — Home"
       >
         <Image

@@ -1,34 +1,27 @@
-import * as React from 'react';
+import * as React from "react"
 
 interface CommonControlledStateProps<T> {
-  value?: T;
-  defaultValue?: T;
+  value?: T
+  defaultValue?: T
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function useControlledState<T, Rest extends any[] = []>(
+export function useControlledState<T, Rest extends unknown[] = []>(
   props: CommonControlledStateProps<T> & {
-    onChange?: (value: T, ...args: Rest) => void;
-  },
+    onChange?: (value: T, ...args: Rest) => void
+  }
 ): readonly [T, (next: T, ...args: Rest) => void] {
-  const { value, defaultValue, onChange } = props;
-
-  const [state, setInternalState] = React.useState<T>(
-    value !== undefined ? value : (defaultValue as T),
-  );
-
-  React.useEffect(() => {
-    if (value !== undefined) setInternalState(value);
-  }, [value]);
+  const { value, defaultValue, onChange } = props
+  const isControlled = value !== undefined
+  const [uncontrolled, setUncontrolled] = React.useState<T>(defaultValue as T)
+  const state = isControlled ? value : uncontrolled
 
   const setState = React.useCallback(
     (next: T, ...args: Rest) => {
-      setInternalState(next);
-      onChange?.(next, ...args);
+      if (!isControlled) setUncontrolled(next)
+      onChange?.(next, ...args)
     },
-    [onChange],
-  );
+    [isControlled, onChange]
+  )
 
-  return [state, setState] as const;
+  return [state, setState] as const
 }
-

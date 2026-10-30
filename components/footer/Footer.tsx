@@ -26,11 +26,11 @@ const social = [
   },
 ] as const
 
-const Footer = () => {
-  const year = new Date().getFullYear()
+const year = new Date().getFullYear()
 
+const Footer = () => {
   return (
-    <footer className="border-t border-muted px-5 py-10 md:px-2 md:pb-12 md:pt-12">
+    <footer className="border-t border-muted px-5 py-10 md:px-2 md:pt-12 md:pb-12">
       <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between md:gap-12">
         <div className="max-w-sm space-y-3">
           <p className="font-maru text-2xl font-bold tracking-tight text-foreground">
@@ -55,7 +55,7 @@ const Footer = () => {
 
         <div className="flex flex-col gap-8 sm:flex-row sm:gap-14">
           <div className="space-y-3">
-            <p className="font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
+            <p className="font-mono text-[10px] font-medium tracking-[0.14em] text-muted-foreground uppercase">
               Connect
             </p>
             <a
@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <p className="font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
+            <p className="font-mono text-[10px] font-medium tracking-[0.14em] text-muted-foreground uppercase">
               Social
             </p>
             <ul className="flex flex-wrap gap-2">
@@ -78,7 +78,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="flex size-10 items-center justify-center rounded-xl border border-border bg-background/60 text-foreground/80 transition-colors hover:border-primary/40 hover:bg-muted/50 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    className="flex size-10 items-center justify-center rounded-xl border border-border bg-background/60 text-foreground/80 transition-colors hover:border-primary/40 hover:bg-muted/50 hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none"
                   >
                     <HugeiconsIcon icon={icon} size={18} strokeWidth={1.75} />
                   </Link>

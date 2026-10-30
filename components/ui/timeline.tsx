@@ -45,13 +45,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   <div className="size-4 rounded-full border-2 border-primary/70 bg-background ring-4 ring-background dark:border-primary/80" />
                 </div>
               </div>
-              <h3 className="hidden pl-20 font-maru text-xl font-bold text-muted-foreground md:block md:pl-20 md:text-4xl lg:text-5xl">
+              <h3 className="font-maru hidden pl-20 text-xl font-bold text-muted-foreground md:block md:pl-20 md:text-4xl lg:text-5xl">
                 {item.title}
               </h3>
             </div>
 
-            <div className="relative w-full pl-20 pr-1 md:pl-4">
-              <h3 className="mb-3 block text-left font-maru text-2xl font-bold text-muted-foreground md:hidden">
+            <div className="relative w-full pr-1 pl-20 md:pl-4">
+              <h3 className="font-maru mb-3 block text-left text-2xl font-bold text-muted-foreground md:hidden">
                 {item.title}
               </h3>
               {item.content}

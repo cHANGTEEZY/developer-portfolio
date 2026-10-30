@@ -1,22 +1,22 @@
-import * as React from 'react';
-import type { Transition } from 'motion/react';
+import * as React from "react"
+import type { Transition } from "motion/react"
 
 import {
   Switch as SwitchPrimitive,
   SwitchThumb as SwitchThumbPrimitive,
   SwitchIcon as SwitchIconPrimitive,
   type SwitchProps as SwitchPrimitiveProps,
-} from '@/components/animate-ui/primitives/base/switch';
-import { cn } from '@/lib/utils';
+} from "@/components/animate-ui/primitives/base/switch"
+import { cn } from "@/lib/utils"
 
 type SwitchProps = SwitchPrimitiveProps & {
-  pressedWidth?: number;
+  pressedWidth?: number
   /** Motion transition for thumb press / layout (default: snappy spring). */
-  thumbTransition?: Transition;
-  startIcon?: React.ReactElement;
-  endIcon?: React.ReactElement;
-  thumbIcon?: React.ReactElement;
-};
+  thumbTransition?: Transition
+  startIcon?: React.ReactElement
+  endIcon?: React.ReactElement
+  thumbIcon?: React.ReactElement
+}
 
 function Switch({
   className,
@@ -30,15 +30,15 @@ function Switch({
   return (
     <SwitchPrimitive
       className={cn(
-        'relative peer focus-visible:border-ring focus-visible:ring-ring/50 flex h-5 w-8 shrink-0 items-center justify-start overflow-hidden rounded-full border border-transparent px-px shadow-xs outline-none focus-visible:ring-[3px] focus-visible:ring-inset disabled:cursor-not-allowed disabled:opacity-50',
-        'data-[checked]:bg-primary data-[unchecked]:bg-input dark:data-[unchecked]:bg-input/80 data-[checked]:justify-end',
-        className,
+        "peer relative flex h-5 w-8 shrink-0 items-center justify-start overflow-hidden rounded-full border border-transparent px-px shadow-xs outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:ring-inset disabled:cursor-not-allowed disabled:opacity-50",
+        "data-[checked]:justify-end data-[checked]:bg-primary data-[unchecked]:bg-input dark:data-[unchecked]:bg-input/80",
+        className
       )}
       {...props}
     >
       <SwitchThumbPrimitive
         className={cn(
-          'relative z-10 box-border max-h-full min-h-0 min-w-0 max-w-[calc(100%-2px)] shrink-0 bg-background dark:data-[unchecked]:bg-foreground dark:data-[checked]:bg-primary-foreground pointer-events-none block size-4 rounded-full ring-0',
+          "pointer-events-none relative z-10 box-border block size-4 max-h-full min-h-0 max-w-[calc(100%-2px)] min-w-0 shrink-0 rounded-full bg-background ring-0 dark:data-[checked]:bg-primary-foreground dark:data-[unchecked]:bg-foreground"
         )}
         pressedAnimation={{ width: pressedWidth }}
         transition={thumbTransition}
@@ -46,7 +46,7 @@ function Switch({
         {thumbIcon && (
           <SwitchIconPrimitive
             position="thumb"
-            className="absolute [&_svg]:size-[9px] left-1/2 top-1/2 -translate-1/2 dark:text-neutral-500 text-neutral-400"
+            className="absolute top-1/2 left-1/2 -translate-1/2 text-neutral-400 dark:text-neutral-500 [&_svg]:size-[9px]"
           >
             {thumbIcon}
           </SwitchIconPrimitive>
@@ -56,7 +56,7 @@ function Switch({
       {startIcon && (
         <SwitchIconPrimitive
           position="left"
-          className="absolute [&_svg]:size-[9px] left-0.5 top-1/2 -translate-y-1/2 dark:text-neutral-500 text-neutral-400"
+          className="absolute top-1/2 left-0.5 -translate-y-1/2 text-neutral-400 dark:text-neutral-500 [&_svg]:size-[9px]"
         >
           {startIcon}
         </SwitchIconPrimitive>
@@ -64,13 +64,13 @@ function Switch({
       {endIcon && (
         <SwitchIconPrimitive
           position="right"
-          className="absolute [&_svg]:size-[9px] right-0.5 top-1/2 -translate-y-1/2 dark:text-neutral-400 text-neutral-500"
+          className="absolute top-1/2 right-0.5 -translate-y-1/2 text-neutral-500 dark:text-neutral-400 [&_svg]:size-[9px]"
         >
           {endIcon}
         </SwitchIconPrimitive>
       )}
     </SwitchPrimitive>
-  );
+  )
 }
 
-export { Switch, type SwitchProps };
+export { Switch, type SwitchProps }
