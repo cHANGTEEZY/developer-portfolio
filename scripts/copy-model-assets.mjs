@@ -15,7 +15,7 @@ if (!existsSync(src) || !statSync(src).isDirectory()) {
 
 mkdirSync(dest, { recursive: true })
 
-for (const name of ["killer_beats_casette_mixstation"]) {
+for (const name of ["killer_beats_casette_mixstation", "office_-_assets"]) {
   const from = join(src, name)
   const to = join(dest, name)
   if (!existsSync(from)) continue
