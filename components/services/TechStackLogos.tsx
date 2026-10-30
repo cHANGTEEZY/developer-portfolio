@@ -94,7 +94,7 @@ export function TechStackLogos({ className }: TechStackLogosProps) {
         "flex flex-wrap items-start justify-center gap-x-12 gap-y-8 px-4 py-2 sm:gap-x-16",
         className
       )}
-      aria-label="Technologies we build with"
+      aria-label="Technologies I build with"
     >
       {items.map(({ title, href, Logo }) => (
         <a
