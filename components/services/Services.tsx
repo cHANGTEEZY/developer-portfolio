@@ -293,7 +293,7 @@ const Services = () => {
     <>
       <TechStackLogos className="mb-10 sm:mb-12" />
       <section className="rounded-[2rem] bg-muted-foreground/10 p-6">
-        <div className="mt-5 px-10">
+        <div className="mt-5 px-6 text-center sm:px-10">
           <span className="font-mono text-xs text-muted-foreground">
             Services
           </span>

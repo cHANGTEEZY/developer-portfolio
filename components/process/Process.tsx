@@ -87,7 +87,7 @@ const Process = () => {
       className="border-b border-muted pb-10 md:pb-14"
       aria-labelledby="process-heading"
     >
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col items-center gap-2 text-center">
         <span className="font-mono text-xs text-muted-foreground">
           HOW I WORK
         </span>
