@@ -40,14 +40,14 @@ const TIMELINE = [
 const About = () => {
   return (
     <article className="px-6 sm:px-0">
-      <header className="max-w-[38rem]">
+      <header className="mx-auto max-w-[38rem] text-center">
         <p className="font-mono text-xs tracking-[0.14em] text-muted-foreground uppercase">
           About
         </p>
         <h2 className="mt-4 font-maru text-4xl leading-[1.05] font-bold tracking-tight text-balance text-foreground sm:text-5xl">
           React & React Native developer
         </h2>
-        <p className="mt-6 max-w-[36rem] font-sans text-lg leading-8 text-muted-foreground">
+        <p className="mx-auto mt-6 max-w-[36rem] font-sans text-lg leading-8 text-muted-foreground">
           I&apos;m Sushank Gurung, a developer based in Kathmandu. I build web
           and mobile products with React, React Native, and Expo.
         </p>
@@ -65,7 +65,6 @@ const About = () => {
         label="A keyboard. The key under the pointer sinks, and its neighbours follow."
         intensity={0.72}
         play
-        align="start"
         className="mt-12 max-w-[420px]"
       />
 
@@ -113,7 +112,7 @@ const About = () => {
         />
       </figure>
 
-      <div className="mt-12 flex flex-col items-start gap-3">
+      <div className="mt-12 flex flex-col items-center gap-3">
         <Button
           onClick={() => {
             window.open(siteConfig.whatsappUrl, "_blank", "noopener,noreferrer")
