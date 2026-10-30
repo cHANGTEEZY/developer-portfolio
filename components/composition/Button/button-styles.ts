@@ -6,7 +6,7 @@ export const compositionButtonVariants = cva(
     variants: {
       variant: {
         primary:
-          "border border-primary/20 bg-primary text-primary-foreground shadow-[0_1px_0_0_oklch(0.45_0.12_16.9_/_0.35)] hover:bg-primary/92 hover:shadow-[0_2px_8px_-2px_oklch(0.45_0.18_16.9_/_0.45)]",
+          "border border-primary/20 bg-primary text-primary-foreground shadow-[0_1px_0_0_oklch(0.2_0.006_286_/_0.28)] hover:bg-primary/92 hover:shadow-[0_2px_8px_-2px_oklch(0.2_0.006_286_/_0.35)]",
         secondary:
           "border border-border/80 bg-secondary/90 text-secondary-foreground shadow-sm hover:border-border hover:bg-secondary",
         ghost:
