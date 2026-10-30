@@ -14,6 +14,9 @@ import app13 from "./app13.svg"
 import app14 from "./app14.svg"
 import oripari from "./Oripari.png"
 import cta from "./cta.webp"
+import mdesk from "./mdesk.png"
+import hearttohelp from "./hearttohelp.png"
+import mrvaluator from "./m.png"
 
 export const logos = [
   app1,
@@ -32,4 +35,7 @@ export const logos = [
   app14,
   oripari,
   cta,
+  mdesk,
+  hearttohelp,
+  mrvaluator,
 ]
