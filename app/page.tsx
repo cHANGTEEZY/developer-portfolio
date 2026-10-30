@@ -8,7 +8,6 @@ import Work from "@/components/work/Work"
 import Services from "@/components/services/Services"
 import DarkModeToggle from "@/components/DarkModeToggle"
 import Process from "@/components/process/Process"
-import Testimonials from "@/components/testimonials/Testimonials"
 
 export default function HomePage() {
   return (
@@ -53,13 +52,6 @@ export default function HomePage() {
           <div className="mt-32">
             <Expertise />
           </div>
-        </LayoutWrapper>
-        <LayoutWrapper
-          maxWidth="full"
-          padding="tight"
-          className="mt-16 sm:mt-20"
-        >
-          <Testimonials />
         </LayoutWrapper>
       </main>
       <LayoutWrapper maxWidth="full" padding="tight" className="bg-muted/30">
