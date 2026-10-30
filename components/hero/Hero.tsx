@@ -54,7 +54,11 @@ function ScrollDrivenModel() {
 
   return (
     <group ref={groupRef}>
-      <ComputerModal yOffset={4} rotation={[0, 20.4, 0]} />
+      <ComputerModal
+        offset={[2.4, 1, -3.8]}
+        rotation={[0, -0.12, 0]}
+        fitSize={48}
+      />
     </group>
   )
 }
@@ -309,8 +313,8 @@ const Hero = () => {
         }}
       >
         <WebglContextGuard />
-        <ambientLight intensity={0.6} />
-        <directionalLight position={[5, 8, 5]} intensity={1.2} />
+        <ambientLight intensity={0.85} />
+        <directionalLight position={[6, 10, 4]} intensity={1.6} />
         <Suspense
           fallback={
             <Html center>

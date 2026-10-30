@@ -4,5 +4,5 @@
  * served from the same origin as the app (works with Vercel / CDN for static files).
  */
 
-/** Killer Beats cassette mixstation — hosted on UploadThing; see `killerBeatsCdn.ts`. */
-export { KILLER_BEATS_SCENE_GLTF_URL as KILLER_BEATS_SCENE_GLTF } from "./killerBeatsCdn"
+/** Office desk scene. Authored under `assets/models` and served from `public/models`. */
+export const OFFICE_SCENE_URL = "/models/office_-_assets/scene.gltf"
