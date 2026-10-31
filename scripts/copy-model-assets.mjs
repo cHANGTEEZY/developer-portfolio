@@ -1,4 +1,4 @@
-import { cpSync, existsSync, mkdirSync, statSync } from "node:fs"
+import { cpSync, existsSync, mkdirSync, rmSync, statSync } from "node:fs"
 import { dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
 
@@ -13,13 +13,9 @@ if (!existsSync(src) || !statSync(src).isDirectory()) {
   process.exit(0)
 }
 
+// Mirror the folder so stale files (old model versions) never ship to the CDN.
+rmSync(dest, { recursive: true, force: true })
 mkdirSync(dest, { recursive: true })
-
-for (const name of ["killer_beats_casette_mixstation", "office_-_assets"]) {
-  const from = join(src, name)
-  const to = join(dest, name)
-  if (!existsSync(from)) continue
-  cpSync(from, to, { recursive: true })
-}
+cpSync(src, dest, { recursive: true })
 
 console.log("[copy-model-assets] Synced assets/models -> public/models")

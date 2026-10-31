@@ -1,7 +1,6 @@
 import { Center, useGLTF } from "@react-three/drei"
 import { useMemo } from "react"
 import * as THREE from "three"
-
 import { OFFICE_SCENE_URL } from "@/lib/modelUrls"
 
 type ComputerModalProps = {
@@ -12,15 +11,17 @@ type ComputerModalProps = {
   offset?: [number, number, number]
 }
 
+/** The GLB is meshopt-compressed, so skip the Draco decoder (saves a CDN round-trip). */
+const USE_DRACO = false
+const USE_MESHOPT = true
+
 const ComputerModal = ({
   rotation = [0, 0, 0],
   fitSize = 36,
   offset = [0, 0, 0],
 }: ComputerModalProps) => {
-  const { scene } = useGLTF(OFFICE_SCENE_URL)
+  const { scene } = useGLTF(OFFICE_SCENE_URL, USE_DRACO, USE_MESHOPT)
 
-  // Scale from the model's bounds so the desk reads the same size whatever
-  // units the file was authored in.
   const scale = useMemo(() => {
     const size = new THREE.Box3()
       .setFromObject(scene)
@@ -40,6 +41,6 @@ const ComputerModal = ({
   )
 }
 
-useGLTF.preload(OFFICE_SCENE_URL)
+useGLTF.preload(OFFICE_SCENE_URL, USE_DRACO, USE_MESHOPT)
 
 export default ComputerModal

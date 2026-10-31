@@ -8,22 +8,29 @@ import {
   useRef,
   useState,
 } from "react"
+import { preload } from "react-dom"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import ComputerModal from "./ComputerModal"
-import { Html, OrbitControls } from "@react-three/drei"
+import { HeroLoader } from "./HeroLoader"
+import { OrbitControls } from "@react-three/drei"
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib"
 import * as THREE from "three"
 import type { Group } from "three"
 import type { PerspectiveCamera } from "three"
-import { LazyLoader } from "../shell"
+import { OFFICE_SCENE_URL } from "@/lib/modelUrls"
 
 /** Extra Y rotation (rad) applied on scroll — model keeps its existing `rotation` pose at rest. */
 const SCROLL_Y_NUDGE = THREE.MathUtils.degToRad(14)
 const SCROLL_ROT_DAMP = 8.5
 
-function ScrollDrivenModel() {
+function ScrollDrivenModel({ onReady }: { onReady: () => void }) {
   const groupRef = useRef<Group>(null)
   const scroll01 = useRef(0)
+
+  // Runs only after the suspended model below has resolved and committed.
+  useEffect(() => {
+    onReady()
+  }, [onReady])
 
   useEffect(() => {
     const update = () => {
@@ -288,6 +295,12 @@ function HeroOrbit({ orbitAllowed }: { orbitAllowed: boolean }) {
 const Hero = () => {
   /** Touch-primary devices: keep page scroll; scroll still nudges the model via ScrollDrivenModel. */
   const [orbitAllowed, setOrbitAllowed] = useState(true)
+  const [modelReady, setModelReady] = useState(false)
+  const handleModelReady = useCallback(() => setModelReady(true), [])
+
+  // Emits <link rel="preload"> in the SSR head so the model download starts
+  // alongside the JS bundles instead of after three.js has booted.
+  preload(OFFICE_SCENE_URL, { as: "fetch", crossOrigin: "anonymous" })
 
   useEffect(() => {
     const mq = window.matchMedia("(pointer: coarse)")
@@ -315,17 +328,12 @@ const Hero = () => {
         <WebglContextGuard />
         <ambientLight intensity={0.85} />
         <directionalLight position={[6, 10, 4]} intensity={1.6} />
-        <Suspense
-          fallback={
-            <Html center>
-              <LazyLoader className="min-h-0" />
-            </Html>
-          }
-        >
-          <ScrollDrivenModel />
+        <Suspense fallback={null}>
+          <ScrollDrivenModel onReady={handleModelReady} />
         </Suspense>
         <HeroOrbit orbitAllowed={orbitAllowed} />
       </Canvas>
+      <HeroLoader visible={!modelReady} />
     </div>
   )
 }
