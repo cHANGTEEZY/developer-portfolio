@@ -4,16 +4,17 @@ import {
   DM_Sans,
   Comic_Neue,
   Kosugi_Maru,
-} from "next/font/google"
-import type { Metadata } from "next"
+} from "next/font/google";
+import type { Metadata } from "next";
 
-import JsonLd from "@/components/seo/JsonLd"
-import { ThemeProvider } from "@/components/theme-provider"
-import { getSiteUrl, siteConfig } from "@/lib/site"
-import { cn } from "@/lib/utils"
-import "./globals.css"
+import { CatCursor } from "@/components/cursor/CatCursor";
+import JsonLd from "@/components/seo/JsonLd";
+import { ThemeProvider } from "@/components/theme-provider";
+import { getSiteUrl, siteConfig } from "@/lib/site";
+import { cn } from "@/lib/utils";
+import "./globals.css";
 
-const siteUrl = getSiteUrl()
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -54,39 +55,39 @@ export const metadata: Metadata = {
   },
   /** Resolves to the current pathname for each route when metadataBase is set */
   alternates: { canonical: "./" },
-}
+};
 
 const fontSans = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
-})
+});
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
-})
+});
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dm-sans",
-})
+});
 
 const comicNeue = Comic_Neue({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-comic",
-})
+});
 
 const kosugiMaru = Kosugi_Maru({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-maru",
-})
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html
@@ -98,13 +99,14 @@ export default function RootLayout({
         dmSans.variable,
         jetbrainsMono.variable,
         comicNeue.variable,
-        kosugiMaru.variable
+        kosugiMaru.variable,
       )}
     >
       <body className={cn(fontSans.className, "font-maru")}>
         <JsonLd />
         <ThemeProvider>{children}</ThemeProvider>
+        <CatCursor />
       </body>
     </html>
-  )
+  );
 }

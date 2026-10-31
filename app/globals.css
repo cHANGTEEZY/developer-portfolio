@@ -182,3 +182,15 @@
 .hover-card {
   @apply rounded-2xl transition-all duration-300 hover:border-2 hover:shadow-lg;
 }
+
+/* The cat cursor replaces the pointer on fine-pointer devices. Text fields keep the I-beam. */
+html.cat-cursor,
+html.cat-cursor * {
+  cursor: none !important;
+}
+
+html.cat-cursor input,
+html.cat-cursor textarea,
+html.cat-cursor [contenteditable="true"] {
+  cursor: text !important;
+}
