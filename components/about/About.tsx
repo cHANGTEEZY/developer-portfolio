@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { ArrowRight02Icon } from "@hugeicons/core-free-icons"
-import { HugeiconsIcon } from "@hugeicons/react"
-import Image from "next/image"
+import { ArrowRight02Icon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import Image from "next/image";
 
-import { HairlinePiece } from "@/components/hairline/HairlinePiece"
-import { Keyboard } from "@/components/ui/hairline"
-import { siteConfig } from "@/lib/site"
+import { HairlinePiece } from "@/components/hairline/HairlinePiece";
+import { Keyboard } from "@/components/ui/hairline";
+import { siteConfig } from "@/lib/site";
 
-import Button from "../composition/Button"
+import Button from "../composition/Button";
 
 const PARAGRAPHS = [
   "It started with a laptop and a deadline. My first projects were freelance jobs, built late at night in Kathmandu, figuring things out one bug at a time.",
@@ -16,7 +16,7 @@ const PARAGRAPHS = [
   "I work mainly with React, React Native and Expo, with TypeScript and Node.js behind them. I didn't just pick these tools up. I enjoy working with them, and I've built my whole workflow around them.",
   "I work alone, on purpose. When you hire me, you talk to the person writing your code. No account managers, no hand-offs, no getting lost in translation. I keep things simple: write clean code, communicate openly, own the work fully, and make each project better than the last.",
   "Kathmandu is where I work. Everywhere else is where I deliver.",
-] as const
+] as const;
 
 const TIMELINE = [
   {
@@ -35,7 +35,7 @@ const TIMELINE = [
     label: "Today",
     text: "Taking on freelance React and React Native projects worldwide.",
   },
-] as const
+] as const;
 
 const About = () => {
   return (
@@ -115,7 +115,11 @@ const About = () => {
       <div className="mt-12 flex flex-col items-center gap-3">
         <Button
           onClick={() => {
-            window.open(siteConfig.whatsappUrl, "_blank", "noopener,noreferrer")
+            window.open(
+              siteConfig.whatsappUrl,
+              "_blank",
+              "noopener,noreferrer",
+            );
           }}
           variant="primary"
           size="medium"
@@ -136,7 +140,7 @@ const About = () => {
         </a>
       </div>
     </article>
-  )
-}
+  );
+};
 
-export default About
+export default About;

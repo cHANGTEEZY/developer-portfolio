@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 
-/** Nose, in the 32×32 viewBox. The pointer sits here so clicks land on the nose. */
 const NOSE = { x: 16, y: 17 };
 const SIZE = 36;
 

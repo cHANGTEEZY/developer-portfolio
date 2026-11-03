@@ -14,7 +14,7 @@ export default defineConfig({
     env: {
       ASSETS: bindings.assets(),
       NEXT_PUBLIC_SITE_URL: bindings.text(
-        "https://developer-portfolio.jagatgurung30.workers.dev",
+        "https://developer-portfolio.sushankgurung2002.workers.dev",
       ),
     },
   }),
